@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <Title>CompASquik - Calculs d'emprunts</Title>
+        <Link rel="stylesheet" href="styleemp.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header class="head">
+            <div class="head__logo">
+                <a href="../index.html">
+                    <img src="../assets/logo.png" alt="logo"/>
+                </a>
+            </div>
+            <div class="head__burger">
+                <nav class="head__nav">
+                    <a href="#" id="btn-cours">Cours <span class="arrow">▼</span></a>
+                    <a href="#" id="btn-calculs">Calculs <span class="arrow">▼</span></a>
+                    <a href="../PCG/indexpcg.html" id="btn-pcg">PCG</a>
+                </nav>
+                <ul id="cours-list" class="cours">
+                    <li><a href="../cours/index01.html">01 - La comptabilité</a></li>
+                    <li><a href="../cours/index02.html">02 - Le Bilan</a></li>
+                    <li><a href="../cours/index03.html">03 - Le compte de résultat</a></li>
+                    <li><a href="../cours/index04.html">04 - L’impact des opérations sur les documents de synthèse</a></li>
+                    <li><a href="../cours/index05.html">05 - La partie double et le fonctionnement des comptes</a></li>
+                    <li><a href="../cours/index06.html">06 - La comptabilisation des factures d’achats et de ventes</a></li>
+                    <li><a href="../cours/index07.html">07 - La comptabilisation des encaissements et des décaissements</a></li>
+                    <li><a href="../cours/index08.html">08 - La TVA</a></li>
+                    <li><a href="../cours/index09.html">09 - La prise en compte de la TVA dans les écritures</a></li>
+                    <li><a href="../cours/index10.html">10 - Les immobilisations</a></li>
+                    <li><a href="../cours/index11.html">11 - Le financement par emprunts</a></li>
+                    <li><a href="../cours/index12.html">12 - La comptabilisation des salaires et des charges sociales</a></li>
+                    <li><a href="../cours/index13.html">13 - Les amortissements</a></li>
+                    <li><a href="../cours/index14.html">14 - Les charges à payer et les produits à recevoir</a></li>
+                    <li><a href="../cours/index15.html">15 - Les charges et les produits constatées d’avances</a></li>
+                    <li><a href="../cours/index16.html">16 - Les dépréciations</a></li>
+                    <li><a href="../cours/index17.html">17 - Les provisions</a></li>
+                    <li><a href="../cours/index18.html">18 - Les stocks : Valorisation et comptabilisation</a></li>
+                    <li><a href="../cours/index19.html">Chapitre 19 :</a></li>
+                    <li><a href="../cours/index20.html">Chapitre 20 :</a></li>
+                    <li><a href="../cours/index21.html">Chapitre 21 :</a></li>
+                </ul>
+                <ul id="calculs-list" class="calculs">
+                    <li><a href="../calculs/indexvds.html">Valorisation des stocks</a></li>
+                    <li><a href="../calculs/indexamt.html">Amortissements</a></li>
+                    <li><a href="../calculs/indexemp.html">Emprunts</a></li>
+                    <li><a href="../calculs/indextva.html">TVA</a></li>
+                    <li><a href="../calculs/indexpct.html">Pourcentages</a></li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <h1>Tableau d'amortissement d'emprunt</h1>
+            <form id="loan-form">
+                <div class="form-group">
+                    <label for="capital">Capital emprunté (€)</label>
+                    <input type="number" id="capital" required min="1">
+                </div>
+                <div class="form-group">
+                    <label for="taux">Taux d'intérêts (%)</label>
+                    <input type="number" step="0.01" id="taux" required min="0">
+                </div>
+                <div class="form-group">
+                    <label for="duree">Durée (années, max 25)</label>
+                    <input type="number" id="duree" required min="1" max="25">
+                </div>
+                <div class="form-group">
+                    <label for="date">Date de début</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="form-group">
+                    <label>Type d'amortissement</label>
+                    <select id="type">
+                        <option value="annuite">Annuités constantes</option>
+                        <option value="constant">Amortissements constants</option>
+                    </select>
+                </div>
+                <button type="submit">Calculer</button>
+            </form>
+            <div id="result"></div>
+        </main>
+    <script src="scriptemp.js"></script>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.head__nav {
+  display: flex;
+  color: black;
+  text-decoration: none;
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.head__logo {
+  display: flex;
+}
+
+.head__logo img {
+  height: 50px;
+}
+
+.head__burger {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  gap: 5px;
+  overflow: visible;
+}
+
+.head__nav {
+  display: flex;
+  gap: 15px;
+}
+
+.head__nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+#btn-cours:hover, #btn-calculs:hover, #btn-pcg:hover {
+  color: blue;
+}
+
+.cours a, .calculs a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.cours, .calculs {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 200px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease, padding 0.3s ease;
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  padding: 0 20px;
+  list-style: none;
+  z-index: 999;
+}
+
+.cours.open, .calculs.open {
+  max-height: 80vh;
+  overflow-y: auto;
+  opacity: 1;
+  transform: translateY(0);
+  padding: 20px;
+}
+
+.cours li, .calculs li {
+  padding: 8px 0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.cours li:hover, .calculs li:hover {
+  transform: scale(1.03);
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}/*# sourceMappingURL=style06.css.map */

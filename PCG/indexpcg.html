@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <Title>CompASquik - PCG</Title>
+        <Link rel="stylesheet" href="stylepcg.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+<body>
+    <header class="head">
+        <div class="head__logo">
+            <a href="../index.html">
+                <img src="../assets/logo.png" alt="logo"/>
+            </a>
+        </div>
+        <div class="head__burger">
+            <nav class="head__nav">
+                <a href="#" id="btn-cours">Cours <span class="arrow">▼</span></a>
+                <a href="#" id="btn-calculs">Calculs <span class="arrow">▼</span></a>
+                <a href="indexpcg.html" id="btn-pcg">PCG</a>
+            </nav>
+            <ul id="cours-list" class="cours">
+                <li><a href="../cours/index01.html">01 - La comptabilité</a></li>
+                <li><a href="../cours/index02.html">02 - Le Bilan</a></li>
+                <li><a href="../cours/index03.html">03 - Le compte de résultat</a></li>
+                <li><a href="../cours/index04.html">04 - L’impact des opérations sur les documents de synthèse</a></li>
+                <li><a href="../cours/index05.html">05 - La partie double et le fonctionnement des comptes</a></li>
+                <li><a href="../cours/index06.html">06 - La comptabilisation des factures d’achats et de ventes</a></li>
+                <li><a href="../cours/index07.html">07 - La comptabilisation des encaissements et des décaissements</a></li>
+                <li><a href="../cours/index08.html">08 - La TVA</a></li>
+                <li><a href="../cours/index09.html">09 - La prise en compte de la TVA dans les écritures</a></li>
+                <li><a href="../cours/index10.html">10 - Les immobilisations</a></li>
+                <li><a href="../cours/index11.html">11 - Le financement par emprunts</a></li>
+                <li><a href="../cours/index12.html">12 - La comptabilisation des salaires et des charges sociales</a></li>
+                <li><a href="../cours/index13.html">13 - Les amortissements</a></li>
+                <li><a href="../cours/index14.html">14 - Les charges à payer et les produits à recevoir</a></li>
+                <li><a href="../cours/index15.html">15 - Les charges et les produits constatées d’avances</a></li>
+                <li><a href="../cours/index16.html">16 - Les dépréciations</a></li>
+                <li><a href="../cours/index17.html">17 - Les provisions</a></li>
+                <li><a href="../cours/index18.html">18 - Les stocks : Valorisation et comptabilisation</a></li>
+                <li><a href="../cours/index19.html">Chapitre 19 :</a></li>
+                <li><a href="../cours/index20.html">Chapitre 20 :</a></li>
+                <li><a href="../cours/index21.html">Chapitre 21 :</a></li>
+            </ul>
+            <ul id="calculs-list" class="calculs">
+                <li><a href="../calculs/indexvds.html">Valorisation des stocks</a></li>
+                <li><a href="../calculs/indexamt.html">Amortissements</a></li>
+                <li><a href="../calculs/indexemp.html">Emprunts</a></li>
+                <li><a href="../calculs/indextva.html">TVA</a></li>
+                <li><a href="../calculs/indexpct.html">Pourcentages</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="pcg">
+        <div class="pcg__title">
+            <h1>Plan Comptable Général</h1>
+            <p>Le plan comptable général est un outil de <strong>codification décimale</strong> qui sert à se repérer lors des écritures comptable durant l'exercice</p>
+        </div>
+        <table>
+            <thead>
+                <tr style="background-color: rgb(194, 194, 194);">
+                    <th>Numéro de compte</th>
+                    <th>Intitulé du compte</th>
+                    <th>Bilan (actif ou passif)</br> 
+                        ou</br>
+                        Compte de résultat (charge ou produit)</th>
+                    <th>Description de chaque lignes des comptes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--Classe 1-->
+                <tr class="lvl1 parent" data-target="child-of-lvl1" style="background-color: rgb(255, 255, 0);">
+                    <th>1 <span class="arrow">▼</span></th>
+                    <th>Comptes de capitaux</th>
+                    <th>Bilan</th>
+                    <th>Regroupe toutes les ressources stables de l'entreprise : capital, réserves, emprunts à long terme et dettes financières durables</th>
+                </tr>
+                <tr class="lvl10 parent child child-of-lvl1" data-target="child-of-lvl10" style="background-color: rgb(255, 255, 130);">
+                    <th>10 <span class="arrow">▼</span></th>
+                    <th>Capital et réserves</th>
+                    <th>Passif</th>
+                    <th>Correspond à l’argent appartenant durablement à l’entreprise : le capital apporté par les associés et les bénéfices qu’elle a accumulés au fil du temps</th>
+                </tr>
+                <tr class="lvl101 parent child child-of-lvl10" data-target="child-of-lvl101" style="background-color: rgb(255, 255, 225);">
+                    <th>101 <span class="arrow">▼</span></th>
+                    <th>Capital social</th>
+                    <th>Passif</th>
+                    <th>Représente les apports faits par les associés ou actionnaires lors de la création ou l’augmentation du capital de l’entreprise</th>
+                </tr>
+                <tr class="lvl1011 child child-of-lvl101 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1011</th>
+                    <th>Capital souscrit - non appelé</th>
+                    <th>Passif</th>
+                    <th>Correspond à la partie du capital que les associés se sont engagés à apporter, mais que l’entreprise n’a pas encore demandée (donc pas encore versée)</th>
+                </tr>
+                <tr class="lvl1012 child child-of-lvl101 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1012</th>
+                    <th>Capital souscrit - appelé, non versé</th>
+                    <th>Passif</th>
+                    <th>Correspond à la partie du capital que l’entreprise a demandée aux associés, mais que ceux-ci n’ont pas encore payé</th>
+                </tr>
+                <tr class="lvl1013 parent child child-of-lvl101" data-target="child-of-lvl1013" style="background-color: rgb(223, 223, 223);">
+                    <th>1013 <span class="arrow">▼</span></th>
+                    <th>Capital souscrit - appelé, versé</th>
+                    <th>Passif</th>
+                    <th>Correspond à la partie du capital qui a été demandée aux associés et qu’ils ont effectivement payée</th>
+                </tr>
+                <tr class="lvl10131 child child-of-lvl1013 nop" style="background-color: rgb(148, 148, 148);">
+                    <th>10131</th>
+                    <th>Capital non amorti</th>
+                    <th>Passif</th>
+                    <th>Correspond à la part du capital social qui n’a pas encore été amortie, c’est-à-dire qui reste inscrite comme obligation durable envers les associés</th>
+                </tr>
+                <tr class="lvl10132 child child-of-lvl1013 nop" style="background-color: rgb(148, 148, 148);">
+                    <th>10132</th>
+                    <th>Capital amorti</th>
+                    <th>Passif</th>
+                    <th>Correspond à la part du capital social qui a déjà été remboursée ou réduite</th>
+                </tr>
+                <tr class="lvl1018 child child-of-lvl101 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1018</th>
+                    <th>Capital souscrit soumis à des réglementations particulières</th>
+                    <th>Passif</th>
+                    <th>Représente le capital apporté par les associés qui est soumis à des règles légales ou spécifiques, comme dans certaines sociétés réglementées</th>
+                </tr>
+                <tr class="lvl102 child child-of-lvl10 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>102</th>
+                    <th>Fonds fiduciaires</th>
+                    <th>Passif</th>
+                    <th>Représente des fonds confiés à l’entreprise par des tiers pour qu’elle les gère, sans que ces fonds deviennent la propriété de l’entreprise</th>
+                </tr>
+                <tr class="lvl104 parent child child-of-lvl10" data-target="child-of-lvl104" style="background-color: rgb(255, 255, 225);">
+                    <th>104 <span class="arrow">▼</span></th>
+                    <th>Primes liées au capital social</th>
+                    <th>Passif</th>
+                    <th>Représente l’argent versé par les associés au-delà de la valeur nominale des actions ou parts, par exemple lors d’une émission d’actions à un prix supérieur à leur valeur nominale</th>
+                </tr>
+                <tr class="lvl1041 child child-of-lvl104 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1041</th>
+                    <th>Primes d'émission</th>
+                    <th>Passif</th>
+                    <th>Correspond à la part payée par les actionnaires en plus de la valeur nominale des actions lors de leur émission</th>
+                </tr>
+                <tr class="lvl1042 child child-of-lvl104 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1042</th>
+                    <th>Primes de fusion</th>
+                    <th>Passif</th>
+                    <th>Correspond à la valeur supplémentaire enregistrée lors de la fusion de sociétés, représentant l’écart entre la valeur réelle des apports et la valeur nominale du capital reçu</th>
+                </tr>
+                <tr class="lvl1043 child child-of-lvl104 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1043</th>
+                    <th>Primes d'apport</th>
+                    <th>Passif</th>
+                    <th>Représente la valeur supplémentaire apportée par un associé ou un tiers lors d’un apport en nature ou en numéraire, au-delà de la valeur nominale du capital reçu</th>
+                </tr>
+                <tr class="lvl1044 child child-of-lvl104 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1044</th>
+                    <th>Primes de conversion d'obligations en actions</th>
+                    <th>Passif</th>
+                    <th>Correspond à la somme payée en plus de la valeur nominale des actions lors de la conversion d’obligations en actions</th>
+                </tr>
+                <tr class="lvl1045 child child-of-lvl104 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1045</th>
+                    <th>Bons de souscription d'actions</th>
+                    <th>Passif</th>
+                    <th>Représente la prime reçue lors de l’émission de bons permettant aux souscripteurs d’acheter des actions à l’avenir à un prix fixé</th>
+                </tr>
+                <tr class="lvl105 child child-of-lvl10 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>105</th>
+                    <th>Écarts de réévaluation</th>
+                    <th>Passif</th>
+                    <th>Représente l’augmentation de valeur des actifs de l’entreprise suite à une réévaluation, par rapport à leur valeur comptable initiale</th>
+                </tr>
+                <tr class="lvl106 parent child child-of-lvl10" data-target="child-of-lvl106" style="background-color: rgb(255, 255, 225);">
+                    <th>106 <span class="arrow">▼</span></th>
+                    <th>Réserves</th>
+                    <th>Passif</th>
+                    <th>Représente les bénéfices de l’entreprise mis de côté et conservés pour renforcer ses fonds propres, plutôt que d’être distribués aux associés ou actionnaires</th>
+                </tr>
+                <tr class="lvl1061 child child-of-lvl106 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1061</th>
+                    <th>Réserves légales</th>
+                    <th>Passif</th>
+                    <th>Correspond à la part du bénéfice obligatoire à mettre de côté chaque année selon la loi, pour protéger le capital de l’entreprise</th>
+                </tr>
+                <tr class="lvl1062 child child-of-lvl106 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1062</th>
+                    <th>Réserves indisponibles</th>
+                    <th>Passif</th>
+                    <th>Représente des réserves constituées qui ne peuvent pas être distribuées aux associés ou actionnaires, car elles sont bloquées par des règles légales ou statutaires</th>
+                </tr>
+                <tr class="lvl1063 child child-of-lvl106 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1063</th>
+                    <th>Réserves statutaires ou contractuelles</th>
+                    <th>Passif</th>
+                    <th>Correspond aux bénéfices mis de côté selon les règles prévues par les statuts de l’entreprise ou par des contrats, et qui ne peuvent pas être distribués librement</th>
+                </tr>
+                <tr class="lvl1064 child child-of-lvl106 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1064</th>
+                    <th>Réserves règlementées</th>
+                    <th>Passif</th>
+                    <th>Représente les bénéfices mis de côté conformément à des obligations légales ou réglementaires spécifiques, souvent pour protéger l’entreprise ou garantir certains engagements</th>
+                </tr>
+                <tr class="lvl1068 child child-of-lvl106 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1068</th>
+                    <th>Autres réserves</th>
+                    <th>Passif</th>
+                    <th>Regroupe les bénéfices mis de côté par l’entreprise pour des raisons diverses, qui ne sont pas couvertes par les autres types de réserves légales, statutaires ou réglementées</th>
+                </tr>
+                <tr class="lvl107 child child-of-lvl10 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>107</th>
+                    <th>Écart d'équivalence</th>
+                    <th>Passif</th>
+                    <th>Représente la différence entre la valeur comptable des titres de participation détenus par l’entreprise et la part correspondante du capital des sociétés dans lesquelles elle a investi</th>
+                </tr>
+                <tr class="lvl108 child child-of-lvl10 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>108</th>
+                    <th>Compte de l'exploitant</th>
+                    <th>Passif</th>
+                    <th>Représente les sommes que l’exploitant (ou le dirigeant) retire ou apporte à l’entreprise, reflétant ses mouvements financiers personnels avec l’entreprise</th>
+                </tr>
+                <tr class="lvl109 child child-of-lvl10 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>109</th>
+                    <th>Actionnaires : capital souscrit - non appelé</th>
+                    <th>Passif</th>
+                    <th>Correspond à la part du capital que les actionnaires se sont engagés à verser mais que l’entreprise n’a pas encore demandé</th>
+                </tr>
+                <tr class="lvl11 parent child child-of-lvl1" data-target="child-of-lvl11" style="background-color: rgb(255, 255, 130);">
+                    <th>11 <span class="arrow">▼</span></th>
+                    <th>Report à nouveau</th>
+                    <th>Passif</th>
+                    <th>Représente les bénéfices ou pertes des années précédentes qui n’ont pas été distribués ni affectés à des réserves et sont reportés sur l’exercice en cours</th>
+                </tr>
+                <tr class="lvl110 child child-of-lvl11 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>110</th>
+                    <th>Report à nouveau (solde créditeur)</th>
+                    <th>Passif</th>
+                    <th>Représente les bénéfices des exercices précédents non distribués, conservés dans l’entreprise pour être réinvestis ou utilisés ultérieurement</th>
+                </tr>
+                <tr class="lvl119 child child-of-lvl11 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>119</th>
+                    <th>Report à nouveau (solde débiteur)</th>
+                    <th>Passif</th>
+                    <th>Représente les bénéfices ou pertes des années précédentes qui n’ont pas été distribués ni affectés à des réserves et sont reportés sur l’exercice en cours</th>
+                </tr>
+                <tr class="lvl12 parent child child-of-lvl1" data-target="child-of-lvl12" style="background-color: rgb(255, 255, 130);">
+                    <th>12 <span class="arrow">▼</span></th>
+                    <th>Résultat de l'exercice</th>
+                    <th>Passif</th>
+                    <th>Représente le bénéfice ou la perte généré(e) par l’entreprise sur l’année en cours, avant répartition</th>
+                </tr>
+                <tr class="lvl120 parent child child-of-lvl12" data-target="child-of-lvl120" style="background-color: rgb(255, 255, 225);">
+                    <th>120 <span class="arrow">▼</span></th>
+                    <th>Résultat de l'exercice (bénéfice)</th>
+                    <th>Passif</th>
+                    <th>Représente le profit réalisé par l’entreprise durant l’exercice, avant sa répartition</th>
+                </tr>
+                <tr class="lvl1209 child child-of-lvl120 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1209</th>
+                    <th>Acomptes sur dividendes</th>
+                    <th>Passif</th>
+                    <th>Représente les dividendes versés aux associés ou actionnaires avant la clôture de l’exercice, en avance sur le bénéfice attendu</th>
+                </tr>
+                <tr class="lvl129 child child-of-lvl12 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>129</th>
+                    <th>Résultat de l'exercice (perte)</th>
+                    <th>Passif</th>
+                    <th>Représente la perte réalisée par l’entreprise durant l’exercice, avant son affectation</th>
+                </tr>
+                <tr class="lvl13 parent child child-of-lvl1" data-target="child-of-lvl13" style="background-color: rgb(255, 255, 130);">
+                    <th>13 <span class="arrow">▼</span></th>
+                    <th>Subventions d'investissement</th>
+                    <th>Passif</th>
+                    <th>Représente les aides financières reçues pour financer des investissements, étalées en produits selon l’amortissement des biens financés</th>
+                </tr>
+                <tr class="lvl131 child child-of-lvl13 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>131</th>
+                    <th>Subventions d'équipement octroyées</th>
+                    <th>Passif</th>
+                    <th>Aides reçues pour financer l’achat ou la création d’immobilisations</th>
+                </tr>
+                <tr class="lvl139 child child-of-lvl13 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>139</th>
+                    <th>Subventions d'investissement inscrites au compte de résultat</th>
+                    <th>Passif</th>
+                    <th>Part des subventions virée en produit au rythme de l’amortissement</th>
+                </tr>
+                <tr class="lvl14 parent child child-of-lvl1" data-target="child-of-lvl14" style="background-color: rgb(255, 255, 130);">
+                    <th>14 <span class="arrow">▼</span></th>
+                    <th>Provisions réglementées</th>
+                    <th>Passif</th>
+                    <th>Provisions imposées ou encadrées par la loi ou la fiscalité</th>
+                </tr>
+                <tr class="lvl143 child child-of-lvl14 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>143</th>
+                    <th>Provisions réglementées pour hausse de prix</th>
+                    <th>Passif</th>
+                    <th>Anticipation d’une hausse future du coût de remplacement des stocks</th>
+                </tr>
+                <tr class="lvl145 child child-of-lvl14 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>145</th>
+                    <th>Amortissements dérogatoires</th>
+                    <th>Passif</th>
+                    <th>Amortissements fiscaux supplémentaires</th>
+                </tr>
+                <tr class="lvl148 child child-of-lvl14 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>148</th>
+                    <th>Autres provisions réglementées</th>
+                    <th>Passif</th>
+                    <th>Provisions constituées selon des règles spécifiques</th>
+                </tr>
+                <tr class="lvl15 parent child child-of-lvl1" data-target="child-of-lvl15" style="background-color: rgb(255, 255, 130);">
+                    <th>15 <span class="arrow">▼</span></th>
+                    <th>Provisions</th>
+                    <th>Passif</th>
+                    <th>Sommes mises de côté pour couvrir des pertes ou charges probables</th>
+                </tr>
+                <tr class="lvl151 parent child child-of-lvl15" data-target="child-of-lvl151" style="background-color: rgb(255, 255, 225);">
+                    <th>151 <span class="arrow">▼</span></th>
+                    <th>Provisions pour risques</th>
+                    <th>Passif</th>
+                    <th>Provisions liées à des risques identifiés</th>
+                </tr>
+                <tr class="lvl1511 child child-of-lvl151 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1511</th>
+                    <th>Provisions pour litiges</th>
+                    <th>Passif</th>
+                    <th>Risques liés à des contentieux</th>
+                </tr>
+                <tr class="lvl1512 child child-of-lvl151 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1512</th>
+                    <th>Provisions pour garanties données aux clients</th>
+                    <th>Passif</th>
+                    <th>Garanties commerciales accordées</th>
+                </tr>
+                <tr class="lvl1514 child child-of-lvl151 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1514</th>
+                    <th>Provisions pour amendes et pénalités</th>
+                    <th>Passif</th>
+                    <th>Risques de sanctions financières</th>
+                </tr>
+                <tr class="lvl1515 child child-of-lvl151 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1515</th>
+                    <th>Provisions pour pertes de change</th>
+                    <th>Passif</th>
+                    <th>Risques liés aux variations de devises</th>
+                </tr>
+                <tr class="lvl1516 child child-of-lvl151 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1516</th>
+                    <th>Provisions pour pertes sur contrats</th>
+                    <th>Passif</th>
+                    <th>Pertes prévisibles sur contrats</th>
+                </tr>
+                <tr class="lvl1518 child child-of-lvl151 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1518</th>
+                    <th>Autres provisions pour risques</th>
+                    <th>Passif</th>
+                    <th>Risques divers non classés</th>
+                </tr>
+                <tr class="lvl152 parent child child-of-lvl15" data-target="child-of-lvl152" style="background-color: rgb(255, 255, 225);">
+                    <th>152 <span class="arrow">▼</span></th>
+                    <th>Provisions pour charges</th>
+                    <th>Passif</th>
+                    <th>Charges futures probables</th>
+                </tr>
+                <tr class="lvl1521 child child-of-lvl152 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1521</th>
+                    <th>Provisions pour pensions et obligations similaires</th>
+                    <th>Passif</th>
+                    <th>Engagements sociaux futurs</th>
+                </tr>
+                <tr class="lvl1522 child child-of-lvl152 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1522</th>
+                    <th>Provisions pour restructurations</th>
+                    <th>Passif</th>
+                    <th>Coûts liés aux restructurations</th>
+                </tr>
+                <tr class="lvl1523 child child-of-lvl152 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1523</th>
+                    <th>Provisions pour impôts</th>
+                    <th>Passif</th>
+                    <th>Impôts futurs à payer</th>
+                </tr>
+                <tr class="lvl1524 child child-of-lvl152 nop" style="background-color: rgb(223,  223, 223);">
+                    <th>1524</th>
+                    <th>Provisions pour renouvellement des immobilisations des entreprises concessionnaires</th>
+                    <th>Passif</th>
+                    <th>Financement futur du remplacement ou de la rénovation des immobilisations des entreprises concessionnaires</th>
+                </tr>
+                <tr class="lvl1525 child child-of-lvl152 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1525</th>
+                    <th>Provisions pour gros entretien ou grandes révisions</th>
+                    <th>Passif</th>
+                    <th>Charges futures liées à des opérations importantes de maintenance ou de révision</th>
+                </tr>
+                <tr class="lvl1526 child child-of-lvl152 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1526</th>
+                    <th>Provisions pour remise en état</th>
+                    <th>Passif</th>
+                    <th>Financement de la remise en état de sites, terrains ou installations après exploitation</th>
+                </tr>
+                <tr class="lvl1527 child child-of-lvl152 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1527</th>
+                    <th>Autres provisions pour charges</th>
+                    <th>Passif</th>
+                    <th>Charges futures diverses</th>
+                </tr>
+                <tr class="lvl16 parent child child-of-lvl1" data-target="child-of-lvl16" style="background-color: rgb(255, 255, 130);">
+                    <th>16 <span class="arrow">▼</span></th>
+                    <th>Emprunts et dettes assimilées</th>
+                    <th>Passif</th>
+                    <th>Dettes financières contractées par l’entreprise</th>
+                </tr>
+                <tr class="lvl161 parent child child-of-lvl16" data-target="child-of-lvl161" style="background-color: rgb(255, 255, 225);">
+                    <th>161 <span class="arrow">▼</span></th>
+                    <th>Emprunts obligataires convertibles</th>
+                    <th>Passif</th>
+                    <th>Obligations pouvant être converties en actions</th>
+                </tr>
+                <tr class="lvl1618 child child-of-lvl161 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1618</th>
+                    <th>Intérêts courus sur emprunts obligataires convertibles</th>
+                    <th>Passif</th>
+                    <th>Intérêts accumulés non encore échus</th>
+                </tr>
+                <tr class="lvl162 child child-of-lvl16 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>162</th>
+                    <th>Obligations représentatives de passifs nets remis en fiducie</th>
+                    <th>Passif</th>
+                    <th>Obligations garanties par des actifs remis en fiducie</th>
+                </tr>
+                <tr class="lvl163 parent child child-of-lvl16" data-target="child-of-lvl163" style="background-color: rgb(255, 255, 225);">
+                    <th>163 <span class="arrow">▼</span></th>
+                    <th>Autres emprunts obligataires</th>
+                    <th>Passif</th>
+                    <th>Emprunts obligataires autres que convertibles</th>
+                </tr>
+                <tr class="lvl1638 child child-of-lvl163 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1638</th>
+                    <th>Intérêts courus sur autres emprunts obligataires</th>
+                    <th>Passif</th>
+                    <th>Intérêts accumulés non échus</th>
+                </tr>
+                <tr class="lvl164 parent child child-of-lvl16" data-target="child-of-lvl164" style="background-color: rgb(255, 255, 225);">
+                    <th>164 <span class="arrow">▼</span></th>
+                    <th>Emprunts auprès des établissements de crédit</th>
+                    <th>Passif</th>
+                    <th>Emprunts contractés auprès des banques</th>
+                </tr>
+                <tr class="lvl1648 child child-of-lvl164 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1648</th>
+                    <th>Intérêts courus sur emprunts auprès des établissements de crédit</th>
+                    <th>Passif</th>
+                    <th>Intérêts bancaires courus non échus</th>
+                </tr>
+                <tr class="lvl165 parent child child-of-lvl16" data-target="child-of-lvl165" style="background-color: rgb(255, 255, 225);">
+                    <th>165 <span class="arrow">▼</span></th>
+                    <th>Dépôts et cautionnements reçus</th>
+                    <th>Passif</th>
+                    <th>Garanties financières reçues de tiers</th>
+                </tr>
+                <tr class="lvl1651 child child-of-lvl165 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1651</th>
+                    <th>Dépôts</th>
+                    <th>Passif</th>
+                    <th>Dépôts de garantie reçus</th>
+                </tr>
+                <tr class="lvl1655 child child-of-lvl165 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1655</th>
+                    <th>Cautionnements</th>
+                    <th>Passif</th>
+                    <th>Cautions reçues de tiers</th>
+                </tr>
+                <tr class="lvl1658 child child-of-lvl165 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1658</th>
+                    <th>Intérêts courus sur dépôts et cautionnements reçus</th>
+                    <th>Passif</th>
+                    <th>Intérêts à payer non échus</th>
+                </tr>
+                <tr class="lvl166 parent child child-of-lvl16" data-target="child-of-lvl166" style="background-color: rgb(255, 255, 225);">
+                    <th>166 <span class="arrow">▼</span></th>
+                    <th>Participation des salariés aux résultats</th>
+                    <th>Passif</th>
+                    <th>Sommes dues aux salariés au titre de la participation</th>
+                </tr>
+                <tr class="lvl1661 child child-of-lvl166 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1661</th>
+                    <th>Comptes bloqués</th>
+                    <th>Passif</th>
+                    <th>Participation indisponible temporairement</th>
+                </tr>
+                <tr class="lvl1662 child child-of-lvl166 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1662</th>
+                    <th>Fonds de participation</th>
+                    <th>Passif</th>
+                    <th>Sommes affectées à la participation</th>
+                </tr>
+                <tr class="lvl1668 child child-of-lvl166 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1668</th>
+                    <th>Intérêts courus sur participation des salariés aux résultats</th>
+                    <th>Passif</th>
+                    <th>Intérêts accumulés non encore versés</th>
+                </tr>
+                <tr class="lvl167 parent child child-of-lvl16" data-target="child-of-lvl167" style="background-color: rgb(255, 255, 225);">
+                    <th>167 <span class="arrow">▼</span></th>
+                    <th>Emprunts et dettes assortis de conditions particulières</th>
+                    <th>Passif</th>
+                    <th>Dettes à modalités spécifiques</th>
+                </tr>
+                <tr class="lvl1671 parent child child-of-lvl167" data-target="child-of-lvl1671" style="background-color: rgb(223, 223, 223);">
+                    <th>1671 <span class="arrow">▼</span></th>
+                    <th>Émissions de titres participatifs</th>
+                    <th>Passif</th>
+                    <th>Emprunts liés aux performances de l’entreprise</th>
+                </tr>
+                <tr class="lvl16718 child child-of-lvl1671 nop" style="background-color: rgb(190, 190, 190);">
+                    <th>16718</th>
+                    <th>Intérêts courus sur titres participatifs</th>
+                    <th>Passif</th>
+                    <th>Intérêts non échus</th>
+                </tr>
+                <tr class="lvl1674 parent child child-of-lvl167" data-target="child-of-lvl1674" style="background-color: rgb(223, 223, 223);">
+                    <th>1674 <span class="arrow">▼</span></th>
+                    <th>Avances conditionnées de l'État</th>
+                    <th>Passif</th>
+                    <th>Avances remboursables sous conditions</th>
+                </tr>
+                <tr class="lvl16748 child child-of-lvl1674 nop" style="background-color: rgb(190, 190, 190);">
+                    <th>16748</th>
+                    <th>Intérêts courus sur avances conditionnées</th>
+                    <th>Passif</th>
+                    <th>Intérêts accumulés non échus</th>
+                </tr>
+                <tr class="lvl1675 parent child child-of-lvl167" data-target="child-of-lvl1675" style="background-color: rgb(223, 223, 223);">
+                    <th>1675 <span class="arrow">▼</span></th>
+                    <th>Emprunts participatifs</th>
+                    <th>Passif</th>
+                    <th>Emprunts dépendant des résultats</th>
+                </tr>
+                <tr class="lvl16758 child child-of-lvl1675 nop" style="background-color: rgb(190, 190, 190);">
+                    <th>16758</th>
+                    <th>Intérêts courus sur emprunts participatifs</th>
+                    <th>Passif</th>
+                    <th>Intérêts non échus</th>
+                </tr>
+                <tr class="lvl168 parent child child-of-lvl16" data-target="child-of-lvl168" style="background-color: rgb(255, 255, 225);">
+                    <th>168 <span class="arrow">▼</span></th>
+                    <th>Autres emprunts et dettes assimilées</th>
+                    <th>Passif</th>
+                    <th>Emprunts ne relevant pas des autres catégories</th>
+                </tr>
+                <tr class="lvl1681 child child-of-lvl168 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1681</th>
+                    <th>Autres emprunts</th>
+                    <th>Passif</th>
+                    <th>Emprunts divers</th>
+                </tr>
+                <tr class="lvl1685 child child-of-lvl168 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1685</th>
+                    <th>Rentes viagères capitalisées</th>
+                    <th>Passif</th>
+                    <th>Dettes liées à des rentes viagères</th>
+                </tr>
+                <tr class="lvl1687 child child-of-lvl168 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1687</th>
+                    <th>Autres dettes</th>
+                    <th>Passif</th>
+                    <th>Dettes diverses</th>
+                </tr>
+                <tr class="lvl1688 child child-of-lvl168 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>1688</th>
+                    <th>Intérêts courus sur autres emprunts et dettes assimilées</th>
+                    <th>Passif</th>
+                    <th>Intérêts non échus</th>
+                </tr>
+                <tr class="lvl169 child child-of-lvl16 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>169</th>
+                    <th>Primes de remboursement des emprunts</th>
+                    <th>Passif</th>
+                    <th>Suppléments versés lors du remboursement des emprunts</th>
+                </tr>
+                <tr class="lvl17 parent child child-of-lvl1" data-target="child-of-lvl17" style="background-color: rgb(255, 255, 130);">
+                    <th>17 <span class="arrow">▼</span></th>
+                    <th>Dettes rattachées à des participations</th>
+                    <th>Passif</th>
+                    <th>Dettes envers des entreprises liées</th>
+                </tr>
+                <tr class="lvl171 child child-of-lvl17 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>171</th>
+                    <th>Dettes rattachées à des participations (groupe)</th>
+                    <th>Passif</th>
+                    <th>Dettes envers les sociétés du groupe</th>
+                </tr>
+                <tr class="lvl174 child child-of-lvl17 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>174</th>
+                    <th>Dettes rattachées à des participations (hors groupe)</th>
+                    <th>Passif</th>
+                    <th>Dettes envers des sociétés hors groupe</th>
+                </tr>
+                <tr class="lvl178 child child-of-lvl17 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>178</th>
+                    <th>Dettes rattachées à des sociétés en participation</th>
+                    <th>Passif</th>
+                    <th>Dettes envers des sociétés en participation</th>
+                </tr>
+                <tr class="lvl18 parent child child-of-lvl1" data-target="child-of-lvl18" style="background-color: rgb(255, 255, 130);">
+                    <th>18 <span class="arrow">▼</span></th>
+                    <th>Comptes de liaison des établissements et sociétés en participation</th>
+                    <th>Passif</th>
+                    <th>Mouvements financiers internes</th>
+                </tr>
+                <tr class="lvl181 child child-of-lvl18 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>181</th>
+                    <th>Comptes de liaison des établissements</th>
+                    <th>Passif</th>
+                    <th>Mouvements internes entre établissements</th>
+                </tr>
+                <tr class="lvl186 child child-of-lvl18 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>186</th>
+                    <th>Biens et prestations de services échangés entre établissements (charges)</th>
+                    <th>Charges</th>
+                    <th>Charges internes entre établissements</th>
+                </tr>
+                <tr class="lvl187 child child-of-lvl18 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>187</th>
+                    <th>Biens et prestations de services échangés entre établissements (produits)</th>
+                    <th>Produits</th>
+                    <th>Produits internes entre établissements</th>
+                </tr>
+                <tr class="lvl188 child child-of-lvl18 nop" style="background-color: rgb(255, 255, 225);">
+                    <th>188</th>
+                    <th>Comptes de liaison des sociétés en participation</th>
+                    <th>Passif</th>
+                    <th>Liaisons financières avec sociétés en participation</th>
+                </tr>
+                <!--Classe 2-->
+                <tr class="lvl2 parent" data-target="child-of-lvl2" style="background-color: rgb(255, 0, 0);">
+                    <th>2 <span class="arrow">▼</span></th>
+                    <th>Comptes d'immobilisations</th>
+                    <th>Bilan</th>
+                    <th>Regroupe tous les comptes qui enregistrent les biens durablent que possède l’entreprise, comme les bâtiments, le matériel et les brevets</th>
+                </tr>
+                <tr class="lvl20 parent child child-of-lvl2" data-target="child-of-lvl20" style="background-color: rgb(255, 130, 130);">
+                    <th>20 <span class="arrow">▼</span></th>
+                    <th>Immobilisations incorporelles</th>
+                    <th>Actif</th>
+                    <th>Regroupe des biens non physiques que possède l’entreprise, comme des brevets, des licences ou un fonds de commerce</th>
+                </tr>
+                <tr class="lvl201 parent child child-of-lvl20" data-target="child-of-lvl201" style="background-color: rgb(255, 225, 225);">
+                    <th>201 <span class="arrow">▼</span></th>
+                    <th>Frais d'établissement</th>
+                    <th>Actif</th>
+                    <th>Enregistre les dépenses liées à la création ou à l’organisation initiale de l’entreprise, comme les frais de constitution, de notaire ou de publicité</th>
+                </tr>
+                <tr class="lvl2011 child child-of-lvl201 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2011</th>
+                    <th>Frais de constitution</th>
+                    <th>Actif</th>
+                    <th>Enregistre les dépenses liées à la création officielle de l’entreprise, comme les frais de notaire, d’enregistrement ou de greffe</th>
+                </tr>
+                <tr class="lvl2012 parent child child-of-lvl201" data-target="child-of-lvl2012" style="background-color: rgb(223, 223, 223);">
+                    <th>2012 <span class="arrow">▼</span></th>
+                    <th>Frais de premier établissement</th>
+                    <th>Actif</th>
+                    <th>Enregistre les dépenses engagées pour organiser et lancer l’activité de l’entreprise après sa création, comme les études, publicités ou recrutements initiaux</th>
+                </tr>
+                <tr class="lvl20121 child child-of-lvl2012 nop" style="background-color: rgb(190, 190, 190);">
+                    <th>20121</th>
+                    <th>Frais de premier établissement</th>
+                    <th>Actif</th>
+                    <th>Enregistre les dépenses engagées pour organiser et lancer l’activité de l’entreprise après sa création, comme les études, publicités ou recrutements initiaux</th>
+                </tr>
+                <tr class="lvl20122 child child-of-lvl2012 nop" style="background-color: rgb(190, 190, 190);">
+                    <th>20122</th>
+                    <th>Frais de publicité</th>
+                    <th>Actif</th>
+                    <th>Enregistre les dépenses liées à la promotion de l’entreprise lors de son lancement, comme les annonces, brochures ou campagnes publicitaires</th>
+                </tr>
+                <tr class="lvl2013 child child-of-lvl201 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2013</th>
+                    <th>Frais d'augmentation de capital et d'opérations diverses</th>
+                    <th>Actif</th>
+                    <th>Enregistre les dépenses liées aux opérations financières ou juridiques importantes de l’entreprise, comme les augmentations de capital, fusions, scissions ou transformations</th>
+                </tr>
+                <tr class="lvl203 child child-of-lvl20 nop" style="background-color: rgb(255, 225, 225);">
+                    <th>203</th>
+                    <th>Frais de développement</th>
+                    <th>Actif</th>
+                    <th>Enregistre les dépenses engagées pour créer ou améliorer des produits, services ou procédés nouveaux afin de développer l’activité de l’entreprise</th>
+                </tr>
+                <tr class="lvl205 child child-of-lvl20 nop" style="background-color: rgb(255, 225, 225);">
+                    <th>205</th>
+                    <th>Concessions, brevets, licences, marques, logiciels et droits similaires</th>
+                    <th>Actif</th>
+                    <th>Enregistre les biens immatériels acquis par l’entreprise lui procurant un avantage économique durable</th>
+                </tr>
+                <tr class="lvl206 child child-of-lvl20 nop" style="background-color: rgb(255, 225, 225);">
+                    <th>206</th>
+                    <th>Droit au bail</th>
+                    <th>Actif</th>
+                    <th>Enregistre le montant payé pour obtenir le droit d’occuper un local loué dans le cadre d’un bail commercial</th>
+                </tr>
+                <tr class="lvl207 child child-of-lvl20 nop" style="background-color: rgb(255, 225, 225);">
+                    <th>207</th>
+                    <th>Fonds commercial</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur de la clientèle, de la notoriété et des relations commerciales génératrices de bénéfices futurs</th>
+                </tr>
+                <tr class="lvl208 parent child child-of-lvl20" data-target="child-of-lvl208" style="background-color: rgb(255, 225, 225);">
+                    <th>208 <span class="arrow">▼</span></th>
+                    <th>Autres immobilisations incorporelles</th>
+                    <th>Actif</th>
+                    <th>Regroupe les immobilisations incorporelles ne relevant pas des autres catégories</th>
+                </tr>
+                <tr class="lvl2081 child child-of-lvl208 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2081</th>
+                    <th>Mali de fusion sur actifs incorporels</th>
+                    <th>Actif</th>
+                    <th>Enregistre la perte constatée lors d’une fusion lorsque la valeur des actifs incorporels acquis est inférieure au prix payé</th>
+                </tr>
+                <tr class="lvl21 parent child child-of-lvl2" data-target="child-of-lvl21" style="background-color: rgb(255, 130, 130);">
+                    <th>21 <span class="arrow">▼</span></th>
+                    <th>Immobilisations corporelles</th>
+                    <th>Actif</th>
+                    <th>Regroupe tous les biens matériels durables que possède l’entreprise, comme les terrains, bâtiments, machines et équipements</th>
+                </tr>
+                <tr class="lvl211 parent child child-of-lvl21" data-target="child-of-lvl211" style="background-color: rgb(255, 225, 225);">
+                    <th>211 <span class="arrow">▼</span></th>
+                    <th>Terrains</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des terrains possédés par l’entreprise</th>
+                </tr>
+                <tr class="lvl2111 child child-of-lvl211 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2111</th>
+                    <th>Terrains nus</th>
+                    <th>Actif</th>
+                    <th>Terrains non bâtis détenus par l’entreprise</th>
+                </tr>
+                <tr class="lvl2112 child child-of-lvl211 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2112</th>
+                    <th>Terrains aménagés</th>
+                    <th>Actif</th>
+                    <th>Terrains préparés pour l’exploitation (voiries, réseaux, etc.)</th>
+                </tr>
+                <tr class="lvl2113 child child-of-lvl211 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2113</th>
+                    <th>Sous-sols et sur-sols</th>
+                    <th>Actif</th>
+                    <th>Terrains comprenant des sous-sols ou sur-sols exploités</th>
+                </tr>
+                <tr class="lvl2114 child child-of-lvl211 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2114</th>
+                    <th>Terrains de carrières (tréfonds)</th>
+                    <th>Actif</th>
+                    <th>Terrains utilisés pour l’exploitation de carrières ou ressources minières</th>
+                </tr>
+                <tr class="lvl2115 child child-of-lvl211 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2115</th>
+                    <th>Terrains bâtis</th>
+                    <th>Actif</th>
+                    <th>Terrains supportant des constructions appartenant à l’entreprise</th>
+                </tr>
+                <tr class="lvl212 child child-of-lvl21 nop" style="background-color: rgb(255, 225, 225);">
+                    <th>212</th>
+                    <th>Agencements et aménagements de terrains</th>
+                    <th>Actif</th>
+                    <th>Dépenses engagées pour préparer ou améliorer les terrains (nivellement, voiries, plantations)</th>
+                </tr>
+                <tr class="lvl213 parent child child-of-lvl21" data-target="child-of-lvl213" style="background-color: rgb(255, 225, 225);">
+                    <th>213 <span class="arrow">▼</span></th>
+                    <th>Constructions</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des bâtiments et ouvrages de l’entreprise</th>
+                </tr>
+                <tr class="lvl2131 child child-of-lvl213 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2131</th>
+                    <th>Bâtiments</th>
+                    <th>Actif</th>
+                    <th>Locaux commerciaux, industriels ou administratifs</th>
+                </tr>
+                <tr class="lvl2135 child child-of-lvl213 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2135</th>
+                    <th>Installations générales, agencements et aménagements des constructions</th>
+                    <th>Actif</th>
+                    <th>Travaux rendant les bâtiments fonctionnels (électricité, cloisons, sanitaires)</th>
+                </tr>
+                <tr class="lvl2138 child child-of-lvl213 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2138</th>
+                    <th>Ouvrages d’infrastructure</th>
+                    <th>Actif</th>
+                    <th>Routes internes, canalisations, fondations spécifiques</th>
+                </tr>
+                <tr class="lvl214 child child-of-lvl21 nop" style="background-color: rgb(255, 225, 225);">
+                    <th>214</th>
+                    <th>Constructions sur sol d’autrui (même ventilation que celle du compte 213)</th>
+                    <th>Actif</th>
+                    <th>Bâtiments et installations appartenant à l’entreprise mais construits sur des terrains loués</th>
+                </tr>
+                <tr class="lvl215 parent child child-of-lvl21" data-target="child-of-lvl215" style="background-color: rgb(255, 225, 225);">
+                    <th>215 <span class="arrow">▼</span></th>
+                    <th>Installations techniques, matériels et outillages industriels</th>
+                    <th>Actif</th>
+                    <th>Biens utilisés directement pour la production ou l’exploitation industrielle</th>
+                </tr>
+                <tr class="lvl2151 parent child child-of-lvl215" data-target="child-of-lvl2151" style="background-color: rgb(223, 223, 223);">
+                    <th>2151 <span class="arrow">▼</span></th>
+                    <th>Installations complexes spécialisées</th>
+                    <th>Actif</th>
+                    <th>Installations techniques conçues pour une production spécifique</th>
+                </tr>
+                <tr class="lvl21511 child child-of-lvl2151 nop" style="background-color: rgb(190, 190, 190);">
+                    <th>21511</th>
+                    <th>Installations complexes spécialisées sur sol propre</th>
+                    <th>Actif</th>
+                    <th>Installations spécialisées implantées sur des terrains appartenant à l’entreprise</th>
+                </tr>
+                <tr class="lvl21514 child child-of-lvl2151 nop" style="background-color: rgb(190, 190, 190);">
+                    <th>21514</th>
+                    <th>Installations complexes spécialisées sur sol d’autrui</th>
+                    <th>Actif</th>
+                    <th>Installations spécialisées implantées sur des terrains loués</th>
+                </tr>
+                <tr class="lvl2153 parent child child-of-lvl215" data-target="child-of-lvl2153" style="background-color: rgb(223, 223, 223);">
+                    <th>2153 <span class="arrow">▼</span></th>
+                    <th>Installations à caractère spécifique</th>
+                    <th>Actif</th>
+                    <th>Installations dédiées à une fonction particulière de l’entreprise</th>
+                </tr>
+                <tr class="lvl21531 child child-of-lvl2153 nop" style="background-color: rgb(190, 190, 190);">
+                    <th>21531</th>
+                    <th>Installations à caractère spécifique sur sol propre</th>
+                    <th>Actif</th>
+                    <th>Installations spécifiques implantées sur des terrains appartenant à l’entreprise</th>
+                </tr>
+                <tr class="lvl21534 child child-of-lvl2153 nop" style="background-color: rgb(190, 190, 190);">
+                    <th>21534</th>
+                    <th>Installations à caractère spécifique sur sol d’autrui</th>
+                    <th>Actif</th>
+                    <th>Installations spécifiques implantées sur des terrains loués</th>
+                </tr>
+                <tr class="lvl2154 child child-of-lvl215 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2154</th>
+                    <th>Matériels industriels</th>
+                    <th>Actif</th>
+                    <th>Machines et équipements utilisés pour la production</th>
+                </tr>
+                <tr class="lvl2155 child child-of-lvl215 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2155</th>
+                    <th>Outillages industriels</th>
+                    <th>Actif</th>
+                    <th>Outils et dispositifs utilisés pour la production</th>
+                </tr>
+                <tr class="lvl2157 child child-of-lvl215 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2157</th>
+                    <th>Agencements et aménagements des matériels et outillages industriels</th>
+                    <th>Actif</th>
+                    <th>Dépenses nécessaires pour rendre opérationnels les matériels et outillages</th>
+                </tr>
+                <tr class="lvl218 parent child child-of-lvl21" data-target="child-of-lvl218" style="background-color: rgb(255, 225, 225);">
+                    <th>218 <span class="arrow">▼</span></th>
+                    <th>Autres immobilisations corporelles</th>
+                    <th>Actif</th>
+                    <th>Regroupe les biens matériels durables de l’entreprise qui ne sont pas classés dans les autres comptes d’immobilisations corporelles, comme certains équipements ou installations diverses</th>
+                </tr>
+                <tr class="lvl2181 child child-of-lvl218 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2181</th>
+                    <th>Installations générales, agencements, aménagements divers</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des installations ou aménagements matériels divers qui ne sont pas directement liés à la production, comme les aménagements de bureaux, halls ou espaces communs</th>
+                </tr>
+                <tr class="lvl2182 child child-of-lvl218 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2182</th>
+                    <th>Matériel de transport</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des véhicules utilisés par l’entreprise pour le transport de biens ou de personnes, comme les voitures, camions ou utilitaires</th>
+                </tr>
+                <tr class="lvl2183 child child-of-lvl218 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2183</th>
+                    <th>Matériel de bureau et matériel informatique</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des équipements de bureau et informatiques de l’entreprise, comme les ordinateurs, imprimantes, photocopieurs ou mobiliers de bureau</th>
+                </tr>
+                <tr class="lvl2184 child child-of-lvl218 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2184</th>
+                    <th>Mobilier</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des meubles utilisés dans l’entreprise, comme les bureaux, chaises, armoires ou étagères</th>
+                </tr>
+                <tr class="lvl2185 child child-of-lvl218 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2185</th>
+                    <th>Cheptel</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des animaux détenus par l’entreprise à des fins agricoles ou d’élevage</th>
+                </tr>
+                <tr class="lvl2186 child child-of-lvl218 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2186</th>
+                    <th>Emballages récupérables</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des emballages que l’entreprise peut réutiliser ou récupérer, comme les caisses, palettes ou conteneurs</th>
+                </tr>
+                <tr class="lvl2187 child child-of-lvl218 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2187</th>
+                    <th>Mali de fusion sur actifs corporels</th>
+                    <th>Actif</th>
+                    <th>Enregistre la perte constatée lorsqu’une entreprise absorbe une autre et que la valeur des actifs corporels acquis est inférieure au prix payé</th>
+                </tr>
+                <tr class="lvl22 parent child child-of-lvl2" data-target="child-of-lvl22" style="background-color: rgb(255, 130, 130);">
+                    <th>22 <span class="arrow">▼</span></th>
+                    <th>Immobilisations mises en concession</th>
+                    <th>Actif</th>
+                    <th>Enregistre les biens de l’entreprise (terrains, constructions, installations) qu’elle concède à des tiers pour exploitation, tout en conservant la propriété</th>
+                </tr>
+                <tr class="lvl229 child child-of-lvl22 nop" style="background-color: rgb(255, 225, 225);">
+                    <th>229</th>
+                    <th>Droits du concédant</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des droits que détient l’entreprise lorsqu’elle met ses immobilisations en concession, c’est-à-dire les montants ou avantages qu’elle peut percevoir du concessionnaire</th>
+                </tr>
+                <tr class="lvl23 parent child child-of-lvl2" data-target="child-of-lvl23" style="background-color: rgb(255, 130, 130);">
+                    <th>23 <span class="arrow">▼</span></th>
+                    <th>Immobilisations en cours, avances et acomptes</th>
+                    <th>Actif</th>
+                    <th>Enregistre les biens en cours de construction ou d’acquisition ainsi que les paiements anticipés faits pour des immobilisations non encore réceptionnées</th>
+                </tr>
+                <tr class="lvl231 child child-of-lvl23 nop" style="background-color: rgb(255, 225, 225);">
+                    <th>231</th>
+                    <th>Immobilisations corporelles en cours</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des biens matériels en cours de construction ou de fabrication avant leur mise en service dans l’entreprise</th>
+                </tr>
+                <tr class="lvl232 child child-of-lvl23 nop" style="background-color: rgb(255, 225, 225);">
+                    <th>232</th>
+                    <th>Immobilisations incorporelles en cours</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des biens immatériels en cours de création ou d’acquisition, comme des logiciels en développement ou des projets de brevet non finalisés</th>
+                </tr>
+                <tr class="lvl237 child child-of-lvl23 nop" style="background-color: rgb(255, 225, 225);">
+                    <th>237</th>
+                    <th>Avances et acomptes versés sur commandes d'immobilisations incorporelles</th>
+                    <th>Actif</th>
+                    <th>Enregistre les sommes versées à l’avance par l’entreprise pour l’acquisition ou la création d’immobilisations incorporelles, comme des logiciels, brevets ou licences, avant leur réception ou finalisation</th>
+                </tr>
+                <tr class="lvl238 child child-of-lvl23 nop" style="background-color: rgb(255, 225, 225);">
+                    <th>238</th>
+                    <th>Avances et acomptes versés sur commandes d'immobilisations corporelles</th>
+                    <th>Actif</th>
+                    <th>Enregistre les sommes versées à l’avance par l’entreprise pour l’achat ou la construction d’immobilisations corporelles, comme des machines, bâtiments ou équipements, avant leur livraison ou mise en service</th>
+                </tr>
+                <tr class="lvl26 child child-of-lvl2 parent" data-target="child-of-lvl26" style="background-color: rgb(255, 130, 130);">
+                    <th>26 <span class="arrow">▼</span></th>
+                    <th>Participations et créances rattachées à des participations</th>
+                    <th>Actif</th>
+                    <th>Enregistre les investissements financiers de l’entreprise dans d’autres sociétés (actions, parts) et les créances qui en découlent</th>
+                </tr>
+                <tr class="lvl261 child child-of-lvl26 parent" data-target="child-of-lvl261" style="background-color: rgb(255, 225, 225);">
+                    <th>261 <span class="arrow">▼</span></th>
+                    <th>Titres de participation</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des actions ou parts détenues par l’entreprise dans d’autres sociétés, généralement pour exercer une influence durable sur leur gestion</th>
+                </tr>
+                <tr class="lvl2611 child child-of-lvl261 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2611</th>
+                    <th>Actions</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des actions détenues par l’entreprise dans d’autres sociétés à titre de participation durable</th>
+                </tr>
+                <tr class="lvl2618 child child-of-lvl261 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2618</th>
+                    <th>Autres titres</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des titres détenus par l’entreprise dans d’autres sociétés qui ne sont pas des actions, comme des obligations ou parts sociales à long terme</th>
+                </tr>
+                <tr class="lvl262 child child-of-lvl26 nop" style="background-color: rgb(255, 225, 225);">
+                    <th>262</th>
+                    <th>Titres évalués par équivalence</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des participations dans d’autres sociétés lorsque l’entreprise utilise la méthode de mise en équivalence pour refléter sa part du capital et du résultat de ces sociétés</th>
+                </tr>
+                <tr class="lvl266 parent child child-of-lvl26" data-target="child-of-lvl266" style="background-color: rgb(255, 225, 225);">
+                    <th>266 <span class="arrow">▼</span></th>
+                    <th>Autres formes de participation</th>
+                    <th>Actif</th>
+                    <th>Enregistre les investissements de l’entreprise dans d’autres sociétés sous des formes diverses, comme les associations, groupements ou autres entités où elle détient une influence durable sans posséder d’actions classiques</th>
+                </tr>
+                <tr class="lvl2661 child child-of-lvl266 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2661</th>
+                    <th>Droits représentatifs d'actifs nets remis en fiducie</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des droits détenus par l’entreprise sur des actifs confiés à une fiducie, c’est-à-dire gérés par un tiers pour son compte</th>
+                </tr>
+                <tr class="lvl267 parent child child-of-lvl26" data-target="child-of-lvl267" style="background-color: rgb(255, 225, 225);">
+                    <th>267 <span class="arrow">▼</span></th>
+                    <th>Créances rattachées à des participations</th>
+                    <th>Actif</th>
+                    <th>Enregistre les sommes dues à l’entreprise par des sociétés dans lesquelles elle détient des participations, comme des prêts ou avances</th>
+                </tr>
+                <tr class="lvl2671 child child-of-lvl267 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2671</th>
+                    <th>Créances rattachées à des participations (groupe)</th>
+                    <th>Actif</th>
+                    <th>Enregistre les sommes dues à l’entreprise par des sociétés du même groupe, dans lesquelles elle détient une participation</th>
+                </tr>
+                <tr class="lvl2674 child child-of-lvl267 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2674</th>
+                    <th>Créances rattachées à des participations (hors groupe)</th>
+                    <th>Actif</th>
+                    <th>Enregistre les sommes dues à l’entreprise par des sociétés dans lesquelles elle détient une participation, mais qui n’appartiennent pas au même groupe</th>
+                </tr>
+                <tr class="lvl2675 child child-of-lvl267 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2675</th>
+                    <th>Versements représentatifs d'apports non capitalisés - appel de fonds</th>
+                    <th>Actif</th>
+                    <th>Enregistre les sommes versées par l’entreprise pour des apports dans d’autres sociétés, avant que ces apports ne soient officiellement incorporés au capital</th>
+                </tr>
+                <tr class="lvl2676 child child-of-lvl267 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2676</th>
+                    <th>Avances consolidables</th>
+                    <th>Actif</th>
+                    <th>Enregistre les sommes avancées par l’entreprise à des sociétés liées, qui pourront être converties en capital ou intégrées ultérieurement dans les participations</th>
+                </tr>
+                <tr class="lvl2677 child child-of-lvl267 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2677</th>
+                    <th>Autres créances rattachées à des participations</th>
+                    <th>Actif</th>
+                    <th>Enregistre toutes les autres sommes dues à l’entreprise par des sociétés dans lesquelles elle détient une participation, non classées dans les autres sous-comptes</th>
+                </tr>
+                <tr class="lvl2678 child child-of-lvl267 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2678</th>
+                    <th>Intérêts courus</th>
+                    <th>Actif</th>
+                    <th>Enregistre les intérêts accumulés sur les créances rattachées à des participations, mais non encore reçus par l’entreprise à la date de clôture</th>
+                </tr>
+                <tr class="lvl268 parent child child-of-lvl26" data-target="child-of-lvl268" style="background-color: rgb(255, 225, 225);">
+                    <th>268 <span class="arrow">▼</span></th>
+                    <th>Créances rattachées à des sociétés en participation</th>
+                    <th>Actif</th>
+                    <th>Enregistre les sommes dues à l’entreprise par des sociétés en participation, c’est-à-dire des groupements temporaires d’entreprises pour des opérations communes</th>
+                </tr>
+                <tr class="lvl2681 child child-of-lvl268 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2681</th>
+                    <th>Principal</th>
+                    <th>Actif</th>
+                    <th>Enregistre le montant principal des créances détenues par l’entreprise sur des sociétés en participation, c’est-à-dire sans inclure les intérêts</th>
+                </tr>
+                <tr class="lvl2688 child child-of-lvl268 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2688</th>
+                    <th>Intérêts courus</th>
+                    <th>Actif</th>
+                    <th>Enregistre les intérêts accumulés sur les créances détenues par l’entreprise sur des sociétés en participation, mais non encore reçus à la date de clôture</th>
+                </tr>
+                <tr class="lvl269 child child-of-lvl26 nop" style="background-color: rgb(255, 225, 225);">
+                    <th>269</th>
+                    <th>Versements restant à effectuer sur titres de participation non libérés</th>
+                    <th>Actif</th>
+                    <th>Enregistre les sommes que l’entreprise doit encore verser pour compléter le paiement de ses participations souscrites mais non entièrement réglées</th>
+                </tr>
+                <tr class="lvl27 child child-of-lvl2 parent" data-target="child-of-lvl27" style="background-color: rgb(255, 130, 130);">
+                    <th>27 <span class="arrow">▼</span></th>
+                    <th>Autres immobilisations financières</th>
+                    <th>Actif</th>
+                    <th>Regroupe les investissements financiers durables de l’entreprise autres que les participations, comme les prêts, dépôts à long terme ou titres immobilisés</th>
+                </tr>
+                <tr class="lvl271 child child-of-lvl27 parent" data-target="child-of-lvl271" style="background-color: rgb(255, 225, 225);">
+                    <th>271 <span class="arrow">▼</span></th>
+                    <th>Titres immobilisés autres que les titres immobilisés de l'activité de portefeuille (droit de propriété)</th>
+                    <th>Actif</th>
+                    <th>Enregistre les titres détenus durablement par l’entreprise, représentant un droit de propriété, mais qui ne font pas partie de l’activité de gestion de portefeuille</th>
+                </tr>
+                <tr class="lvl2711 child child-of-lvl271 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2711</th>
+                    <th>Actions</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des actions détenues durablement par l’entreprise, autres que celles destinées à l’activité de portefeuille</th>
+                </tr>
+                <tr class="lvl2718 child child-of-lvl271 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2718</th>
+                    <th>Autres titres</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des titres financiers détenus durablement par l’entreprise, autres que les actions et ceux destinés à l’activité de portefeuille, comme des obligations ou parts sociales</th>
+                </tr>
+                <tr class="lvl272 child child-of-lvl27 parent" data-target="child-of-lvl272" style="background-color: rgb(255, 225, 225);">
+                    <th>272 <span class="arrow">▼</span></th>
+                    <th>Titres immobilisés (droit de créance)</th>
+                    <th>Actif</th>
+                    <th>Enregistre les titres financiers détenus durablement par l’entreprise qui représentent une créance sur une autre société ou entité, comme des obligations ou bons de caisse</th>
+                </tr>
+                <tr class="lvl2721 child child-of-lvl272 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2721</th>
+                    <th>Obligations</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des obligations détenues durablement par l’entreprise, représentant une créance sur l’émetteur avec droit au remboursement et aux intérêts</th>
+                </tr>
+                <tr class="lvl2722 child child-of-lvl272 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2722</th>
+                    <th>Bons</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des bons détenus durablement par l’entreprise, représentant une créance sur l’émetteur avec droit au remboursement à l’échéance</th>
+                </tr>
+                <tr class="lvl273 child child-of-lvl27 nop" style="background-color: rgb(255, 225, 225);">
+                    <th>273</th>
+                    <th>Titres immobilisés de l'activité de portefeuille</th>
+                    <th>Actif</th>
+                    <th>Enregistre les titres financiers acquis par l’entreprise dans le cadre de sa gestion de portefeuille, destinés à être conservés durablement pour percevoir des revenus ou plus-values</th>
+                </tr>
+                <tr class="lvl274 child child-of-lvl27 parent" data-target="child-of-lvl274" style="background-color: rgb(255, 225, 225);">
+                    <th>274 <span class="arrow">▼</span></th>
+                    <th>Prêts</th>
+                    <th>Actif</th>
+                    <th>Enregistre les sommes prêtées durablement par l’entreprise à d’autres sociétés ou personnes, représentant une créance à long terme</th>
+                </tr>
+                <tr class="lvl2741 child child-of-lvl274 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2741</th>
+                    <th>Prêts participatifs</th>
+                    <th>Actif</th>
+                    <th>Enregistre les prêts accordés par l’entreprise à d’autres sociétés, dont le remboursement peut dépendre des résultats ou bénéfices de l’emprunteur</th>
+                </tr>
+                <tr class="lvl2742 child child-of-lvl274 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2742</th>
+                    <th>Prêts aux associés</th>
+                    <th>Actif</th>
+                    <th>Enregistre les sommes prêtées par l’entreprise à ses associés, généralement à long terme et parfois avec intérêts</th>
+                </tr>
+                <tr class="lvl2743 child child-of-lvl274 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2743</th>
+                    <th>Prêts au personnel</th>
+                    <th>Actif</th>
+                    <th>Enregistre les sommes prêtées par l’entreprise à ses employés, souvent à des conditions avantageuses et pour une durée déterminée</th>
+                </tr>
+                <tr class="lvl2748 child child-of-lvl274 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2748</th>
+                    <th>Autres prêts</th>
+                    <th>Actif</th>
+                    <th>Enregistre les prêts accordés par l’entreprise à des tiers qui ne sont pas des associés ou du personnel, et qui sont destinés à être récupérés à long terme</th>
+                </tr>
+                <tr class="lvl275 child child-of-lvl27 parent" data-target="child-of-lvl275" style="background-color: rgb(255, 225, 225);">
+                    <th>275 <span class="arrow">▼</span></th>
+                    <th>Dépôts et cautionnements versés</th>
+                    <th>Actif</th>
+                    <th>Enregistre les sommes versées par l’entreprise en garantie ou dépôt auprès de tiers, comme pour des loyers, marchés ou contrats, et qui seront récupérables</th>
+                </tr>
+                <tr class="lvl2751 child child-of-lvl275 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2751</th>
+                    <th>Dépôts</th>
+                    <th>Actif</th>
+                    <th>Enregistre les sommes versées par l’entreprise à des tiers à titre de garantie ou dépôt, récupérables ultérieurement</th>
+                </tr>
+                <tr class="lvl2755 child child-of-lvl275 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2755</th>
+                    <th>Cautionnements</th>
+                    <th>Actif</th>
+                    <th>Enregistre les sommes versées par l’entreprise pour se porter garant ou assurer l’exécution d’un engagement auprès d’un tiers</th>
+                </tr>
+                <tr class="lvl276 child child-of-lvl27 parent" data-target="child-of-lvl276" style="background-color: rgb(255, 225, 225);">
+                    <th>276 <span class="arrow">▼</span></th>
+                    <th>Autres créances immobilisées</th>
+                    <th>Actif</th>
+                    <th>Enregistre les créances à long terme détenues par l’entreprise qui ne relèvent pas des prêts, dépôts ou titres, comme certaines avances durables à des tiers</th>
+                </tr>
+                <tr class="lvl2761 child child-of-lvl276 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2761</th>
+                    <th>Créances diverses</th>
+                    <th>Actif</th>
+                    <th>Enregistre les créances à long terme de l’entreprise qui ne sont pas classées dans d’autres comptes d’immobilisations financières, comme des avances ou créances spécifiques</th>
+                </tr>
+                <tr class="lvl2768 child child-of-lvl276 parent" data-target="child-of-lvl2768" style="background-color: rgb(223, 223, 223);">
+                    <th>2768 <span class="arrow">▼</span></th>
+                    <th>Intérêts courus</th>
+                    <th>Actif</th>
+                    <th>Enregistre les intérêts accumulés mais non encore reçus sur les créances immobilisées de l’entreprise</th>
+                </tr>
+                <tr class="lvl27682 child child-of-lvl2768 nop" style="background-color: rgb(190, 190, 190);">
+                    <th>27682</th>
+                    <th>Intérêts courus sur titres immobilisés (droit de créance)</th>
+                    <th>Actif</th>
+                    <th>Enregistre les intérêts accumulés mais non encore perçus sur les titres immobilisés qui représentent une créance, comme les obligations</th>
+                </tr>
+                <tr class="lvl27684 child child-of-lvl2768 nop" style="background-color: rgb(190, 190, 190);">
+                    <th>27684</th>
+                    <th>Intérêts courus sur prêts</th>
+                    <th>Actif</th>
+                    <th>Enregistre les intérêts accumulés mais pas encore reçus sur les prêts accordés par l’entreprise</th>
+                </tr>
+                <tr class="lvl27685 child child-of-lvl2768 nop" style="background-color: rgb(190, 190, 190);">
+                    <th>27685</th>
+                    <th>Intérêts courus sur dépôts et cautionnements</th>
+                    <th>Actif</th>
+                    <th>Enregistre les intérêts accumulés mais non encore reçus sur les dépôts ou cautionnements versés par l’entreprise</th>
+                </tr>
+                <tr class="lvl27688 child child-of-lvl2768 nop" style="background-color: rgb(190, 190, 190);">
+                    <th>27688</th>
+                    <th>Intérêts courus sur créances diverses</th>
+                    <th>Actif</th>
+                    <th>Enregistre les intérêts accumulés mais non encore perçus sur les créances immobilisées diverses détenues par l’entreprise</th>
+                </tr>
+                <tr class="lvl277 child child-of-lvl27 parent" data-target="child-of-lvl277" style="background-color: rgb(255, 225, 225);">
+                    <th>277 <span class="arrow">▼</span></th>
+                    <th>Actions propres ou parts propres</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des actions ou parts de l’entreprise qu’elle rachète elle-même, généralement pour les revendre, les attribuer au personnel ou réguler le cours</th>
+                </tr>
+                <tr class="lvl2771 child child-of-lvl277 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2771</th>
+                    <th>Actions propres ou parts propres</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des actions ou parts de l’entreprise qu’elle a rachetées et qu’elle détient elle-même</th>
+                </tr>
+                <tr class="lvl2772 child child-of-lvl277 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2772</th>
+                    <th>Actions propres ou parts propres en voie d’annulation</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des actions ou parts rachetées par l’entreprise qui sont destinées à être annulées prochainement</th>
+                </tr>
+                <tr class="lvl278 child child-of-lvl27 nop" style="background-color: rgb(255, 225, 225);">
+                    <th>278</th>
+                    <th>Mali de fusion sur actifs financiers</th>
+                    <th>Actif</th>
+                    <th>Enregistre la perte constatée lors d’une fusion lorsque la valeur des actifs financiers acquis est inférieure au prix payé</th>
+                </tr>
+                <tr class="lvl279 child child-of-lvl27 nop" style="background-color: rgb(255, 225, 225);">
+                    <th>279</th>
+                    <th>Versements restant à effectuer sur titres immobilisés non libérés</th>
+                    <th>Actif</th>
+                    <th>Enregistre les sommes que l’entreprise doit encore payer pour des titres immobilisés qu’elle a souscrits mais pas encore entièrement réglés</th>
+                </tr>
+                <tr class="lvl28 child child-of-lvl2 parent" data-target="child-of-lvl28" style="background-color: rgb(255, 130, 130);">
+                    <th>28 <span class="arrow">▼</span></th>
+                    <th>Amortissements des immobilisations</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la perte de valeur des immobilisations corporelles et incorporelles de l’entreprise due à l’usage, l’usure ou le temps</th>
+                </tr>
+                <tr class="lvl280 child child-of-lvl28 parent" data-target="child-of-lvl280" style="background-color: rgb(255, 225, 225);">
+                    <th>280 <span class="arrow">▼</span></th>
+                    <th>Amortissements des immobilisations incorporelles et des frais d’établissement</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la perte de valeur des immobilisations incorporelles (brevets, logiciels, etc.) et des frais d’établissement, en suivant la même ventilation que le compte 20</th>
+                </tr>
+                <tr class="lvl2801 child child-of-lvl280 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2801</th>
+                    <th>Frais d'établissement</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre l’amortissement des frais engagés pour la création et l’organisation initiale de l’entreprise, en suivant la même ventilation que le compte 201 (constitution, premier établissement, opérations diverses)</th>
+                </tr>
+                <tr class="lvl2803 child child-of-lvl280 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2803</th>
+                    <th>Frais de développement</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre l’amortissement des dépenses engagées pour créer ou améliorer des produits, services ou procédés nouveaux</th>
+                </tr>
+                <tr class="lvl2805 child child-of-lvl280 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2805</th>
+                    <th>Concessions et droits similaires, brevets, licences, solutions informatiques, droits et valeurs similaires</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre l’amortissement des immobilisations incorporelles achetées ou acquises par l’entreprise, comme brevets, licences, logiciels ou procédés</th>
+                </tr>
+                <tr class="lvl2806 child child-of-lvl280 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2806</th>
+                    <th>Droit au bail</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre l’amortissement du droit payé par l’entreprise pour occuper un local loué, répartissant son coût sur la durée d’utilisation prévue</th>
+                </tr>
+                <tr class="lvl2807 child child-of-lvl280 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2807</th>
+                    <th>Fonds commercial</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre l’amortissement du fonds commercial, c’est-à-dire la répartition de sa valeur sur sa durée d’utilisation estimée pour tenir compte de la perte de valeur liée à l’activité</th>
+                </tr>
+                <tr class="lvl2808 child child-of-lvl280 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2808</th>
+                    <th>Autres immobilisations incorporelles</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre l’amortissement des immobilisations incorporelles qui ne sont pas classées dans les autres comptes, comme certains logiciels ou droits divers</th>
+                </tr>
+                <tr class="lvl281 child child-of-lvl28 parent" data-target="child-of-lvl281" style="background-color: rgb(255, 225, 225);">
+                    <th>281 <span class="arrow">▼</span></th>
+                    <th>Amortissements des immobilisations corporelles</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la perte de valeur des biens matériels de l’entreprise (terrains, constructions, matériels, outillages, etc.) due à l’usage ou au temps, en suivant la même ventilation que le compte 21</th>
+                </tr>
+                <tr class="lvl2812 child child-of-lvl281 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2812</th>
+                    <th>Agencements, aménagements de terrains</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre l’amortissement des dépenses liées à la préparation ou l’amélioration des terrains, comme le nivellement, les voiries ou plantations, en suivant la même ventilation que le compte 212</th>
+                </tr>
+                <tr class="lvl2813 child child-of-lvl281 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2813</th>
+                    <th>Constructions</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre l’amortissement des bâtiments et ouvrages de l’entreprise, en suivant la même ventilation que le compte 213 (bâtiments, installations, ouvrages d’infrastructure, etc.)</th>
+                </tr>
+                <tr class="lvl2814 child child-of-lvl281 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2814</th>
+                    <th>Constructions sur sol d'autrui</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre l’amortissement des bâtiments et installations possédés par l’entreprise mais construits sur des terrains loués, en suivant la même ventilation que le compte 214</th>
+                </tr>
+                <tr class="lvl2815 child child-of-lvl281 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2815</th>
+                    <th>Installations, matériel et outillage industriels</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre l’amortissement des installations, machines et outillages utilisés pour la production industrielle, en suivant la même ventilation que le compte 215</th>
+                </tr>
+                <tr class="lvl2818 child child-of-lvl281 parent" data-target="child-of-lvl2818" style="background-color: rgb(223, 223, 223);">
+                    <th>2818 <span class="arrow">▼</span></th>
+                    <th>Autres immobilisations corporelles</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre l’amortissement des biens matériels durables non classés ailleurs, comme le mobilier, matériel de bureau ou matériel de transport, en suivant la même ventilation que le compte 218</th>
+                </tr>
+                <tr class="lvl28187 child child-of-lvl2818 nop" style="background-color: rgb(190, 190, 190);">
+                    <th>28187</th>
+                    <th>Amortissement du mali de fusion sur actifs corporels</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la répartition dans le temps de la perte constatée lors d’une fusion lorsque la valeur des actifs corporels acquis est inférieure au prix payé</th>
+                </tr>
+                <tr class="lvl282 child child-of-lvl28 nop" style="background-color: rgb(255, 225, 225);">
+                    <th>282</th>
+                    <th>Amortissements des immobilisations mises en concession</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la perte de valeur des biens concédés à des tiers (terrains, constructions, installations) sur la durée de la concession</th>
+                </tr>
+                <tr class="lvl29 child child-of-lvl2 parent" data-target="child-of-lvl29" style="background-color: rgb(255, 130, 130);">
+                    <th>29 <span class="arrow">▼</span></th>
+                    <th>Dépréciations des immobilisations</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre les pertes de valeur des immobilisations (corporelles, incorporelles ou financières) lorsqu’elles sont jugées durablement inférieures à leur valeur comptable, en complément des amortissements</th>
+                </tr>
+                <tr class="lvl290 child child-of-lvl29 parent" data-target="child-of-lvl290" style="background-color: rgb(255, 225, 225);">
+                    <th>290 <span class="arrow">▼</span></th>
+                    <th>Dépréciations des immobilisations incorporelles</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la perte de valeur des immobilisations incorporelles (brevets, licences, logiciels, fonds commercial, etc.) lorsqu’elles valent durablement moins que leur valeur comptable</th>
+                </tr>
+                <tr class="lvl2901 child child-of-lvl290 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2901</th>
+                    <th>Frais d’établissement</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des frais engagés pour la création et l’organisation initiale de l’entreprise lorsque leur valeur est durablement inférieure à leur coût</th>
+                </tr>
+                <tr class="lvl2903 child child-of-lvl290 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2903</th>
+                    <th>Frais de développement</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des dépenses engagées pour créer ou améliorer des produits, services ou procédés nouveaux lorsque leur valeur est durablement inférieure à leur coût</th>
+                </tr>
+                <tr class="lvl2905 child child-of-lvl290 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2905</th>
+                    <th>Marques, procédés, droits et valeurs similaires</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des immobilisations incorporelles comme les marques, procédés, licences ou droits similaires lorsque leur valeur est durablement inférieure au coût d’acquisition</th>
+                </tr>
+                <tr class="lvl2906 child child-of-lvl290 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2906</th>
+                    <th>Droit au bail</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation du droit au bail lorsque sa valeur durablement réelle est inférieure au montant payé par l’entreprise pour l’acquérir</th>
+                </tr>
+                <tr class="lvl2907 child child-of-lvl290 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2907</th>
+                    <th>Fonds commercial</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation du fonds commercial lorsque sa valeur réelle est durablement inférieure à sa valeur comptable</th>
+                </tr>
+                <tr class="lvl2908 child child-of-lvl290 parent" data-target="child-of-lvl2908" style="background-color: rgb(223, 223, 223);">
+                    <th>2908 <span class="arrow">▼</span></th>
+                    <th>Autres immobilisations incorporelles</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des immobilisations incorporelles non classées ailleurs, comme certains logiciels ou droits divers, lorsque leur valeur est durablement inférieure à leur coût</th>
+                </tr>
+                <tr class="lvl29081 child child-of-lvl2908 nop" style="background-color: rgb(190, 190, 190);">
+                    <th>29081</th>
+                    <th>Dépréciation du mali de fusion sur actifs incorporels</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la perte de valeur constatée sur un mali de fusion lorsque la valeur des actifs incorporels acquis est durablement inférieure au prix payé</th>
+                </tr>
+                <tr class="lvl291 child child-of-lvl29 parent" data-target="child-of-lvl291" style="background-color: rgb(255, 225, 225);">
+                    <th>291 <span class="arrow">▼</span></th>
+                    <th>Dépréciations des immobilisations corporelles</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la perte de valeur des biens matériels (terrains, constructions, matériels, outillages, etc.) lorsque leur valeur réelle est durablement inférieure à leur valeur comptable</th>
+                </tr>
+                <tr class="lvl2911 child child-of-lvl291 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2911</th>
+                    <th>Terrains</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des terrains détenus par l’entreprise lorsque leur valeur réelle est durablement inférieure à leur valeur comptable</th>
+                </tr>
+                <tr class="lvl2912 child child-of-lvl291 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2912</th>
+                    <th>Agencements et aménagements de terrains</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des dépenses engagées pour préparer ou améliorer les terrains (nivellement, voiries, plantations, etc.) lorsque leur valeur est durablement inférieure à leur coût</th>
+                </tr>
+                <tr class="lvl2913 child child-of-lvl291 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2913</th>
+                    <th>Constructions</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des bâtiments et ouvrages de l’entreprise lorsque leur valeur réelle est durablement inférieure à leur valeur comptable</th>
+                </tr>
+                <tr class="lvl2914 child child-of-lvl291 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2914</th>
+                    <th>Constructions sur sol d'autrui</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des bâtiments et installations possédés par l’entreprise mais construits sur des terrains loués, lorsque leur valeur réelle est durablement inférieure à leur valeur comptable</th>
+                </tr>
+                <tr class="lvl2915 child child-of-lvl291 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2915</th>
+                    <th>Installations techniques, matériels et outillages industriels</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des machines, installations et outillages utilisés pour la production lorsque leur valeur réelle est durablement inférieure à leur valeur comptable</th>
+                </tr>
+                <tr class="lvl2918 child child-of-lvl291 parent" data-target="child-of-lvl2918" style="background-color: rgb(223, 223, 223);">
+                    <th>2918 <span class="arrow">▼</span></th>
+                    <th>Autres immobilisations corporelles</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des biens matériels durables non classés ailleurs (mobilier, matériel de bureau, matériel de transport, etc.) lorsque leur valeur réelle est durablement inférieure à leur valeur comptable</th>
+                </tr>
+                <tr class="lvl29187 child child-of-lvl2918 nop" style="background-color: rgb(190, 190, 190);">
+                    <th>29187</th>
+                    <th>Dépréciation du mali de fusion sur actifs corporels</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la perte de valeur constatée sur un mali de fusion lorsque la valeur des actifs corporels acquis est durablement inférieure au prix payé</th>
+                </tr>
+                <tr class="lvl292 child child-of-lvl29 nop" style="background-color: rgb(255, 225, 225);">
+                    <th>292</th>
+                    <th>Dépréciations des immobilisations mises en concession</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la perte de valeur des biens concédés à des tiers (terrains, constructions, installations) lorsque leur valeur réelle est durablement inférieure à leur valeur comptable</th>
+                </tr>
+                <tr class="lvl293 child child-of-lvl29 parent" data-target="child-of-lvl293" style="background-color: rgb(255, 225, 225);">
+                    <th>293 <span class="arrow">▼</span></th>
+                    <th>Dépréciations des immobilisations en cours</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la perte de valeur des biens en cours de construction ou d’acquisition lorsque leur valeur estimée est durablement inférieure aux coûts engagés</th>
+                </tr>
+                <tr class="lvl2931 child child-of-lvl293 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2931</th>
+                    <th>Immobilisations corporelles en cours</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des biens matériels en cours de construction ou de fabrication lorsque leur valeur estimée est durablement inférieure aux coûts engagés</th>
+                </tr>
+                <tr class="lvl2932 child child-of-lvl293 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2932</th>
+                    <th>Immobilisations incorporelles en cours</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des biens immatériels en cours de création ou d’acquisition (logiciels, brevets, projets) lorsque leur valeur estimée est durablement inférieure aux coûts engagés</th>
+                </tr>
+                <tr class="lvl296 child child-of-lvl29 parent" data-target="child-of-lvl296" style="background-color: rgb(255, 225, 225);">
+                    <th>296 <span class="arrow">▼</span></th>
+                    <th>Dépréciations des participations et créances rattachées à des participations</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la perte de valeur des titres ou créances détenus dans d’autres sociétés lorsque leur valeur réelle est durablement inférieure à leur valeur comptable</th>
+                </tr>
+                <tr class="lvl2961 child child-of-lvl296 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2961</th>
+                    <th>Titres de participation</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des actions ou parts détenues par l’entreprise dans d’autres sociétés lorsque leur valeur réelle est durablement inférieure à leur coût d’acquisition</th>
+                </tr>
+                <tr class="lvl2962 child child-of-lvl296 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2962</th>
+                    <th>Titres évalués par équivalence</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des participations dans d’autres sociétés lorsqu’elles sont évaluées par mise en équivalence et que leur valeur durablement réelle est inférieure à la valeur comptable</th>
+                </tr>
+                <tr class="lvl2966 child child-of-lvl296 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2966</th>
+                    <th>Autres formes de participation</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des investissements durables dans d’autres entités (associations, groupements, etc.) lorsque leur valeur réelle est durablement inférieure à la valeur comptable</th>
+                </tr>
+                <tr class="lvl2967 child child-of-lvl296 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2967</th>
+                    <th>Créances rattachées à des participations (même ventilation que celle du compte 267)</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des créances détenues sur des sociétés dans lesquelles l’entreprise détient une participation, en suivant la même ventilation que le compte 267 (groupe, hors groupe, avances consolidables, autres créances, intérêts courus)</th>
+                </tr>
+                <tr class="lvl2968 child child-of-lvl296 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2968</th>
+                    <th>Créances rattachées à des sociétés en participation (même ventilation que celle du compte 268)</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des créances détenues sur des sociétés en participation, en suivant la même ventilation que le compte 268 (principal, intérêts courus)</th>
+                </tr>
+                <tr class="lvl297 child child-of-lvl29 parent" data-target="child-of-lvl297" style="background-color: rgb(255, 225, 225);">
+                    <th>297 <span class="arrow">▼</span></th>
+                    <th>Dépréciations des autres immobilisations financières</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la perte de valeur des investissements financiers durables de l’entreprise (prêts, dépôts, titres immobilisés, etc.) lorsque leur valeur réelle est durablement inférieure à leur valeur comptable</th>
+                </tr>
+                <tr class="lvl2971 child child-of-lvl297 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2971</th>
+                    <th>Titres immobilisés autres que les titres immobilisés de l'activité de portefeuille (droit de propriété)</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des titres détenus durablement par l’entreprise représentant un droit de propriété, lorsque leur valeur réelle est durablement inférieure à leur coût d’acquisition</th>
+                </tr>
+                <tr class="lvl2972 child child-of-lvl297 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2972</th>
+                    <th>Titres immobilisés (droit de créance)</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des titres financiers détenus durablement par l’entreprise qui représentent une créance, comme des obligations, lorsque leur valeur réelle est durablement inférieure à leur coût d’acquisition</th>
+                </tr>
+                <tr class="lvl2973 child child-of-lvl297 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2973</th>
+                    <th>Titres immobilisés de l'activité de portefeuille</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des titres acquis dans le cadre de la gestion de portefeuille durable de l’entreprise, lorsque leur valeur réelle est durablement inférieure au coût d’acquisition</th>
+                </tr>
+                <tr class="lvl2974 child child-of-lvl297 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2974</th>
+                    <th>Prêts</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des prêts accordés durablement par l’entreprise à d’autres sociétés ou personnes lorsque leur valeur recouvrable est durablement inférieure au montant prêté</th>
+                </tr>
+                <tr class="lvl2975 child child-of-lvl297 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2975</th>
+                    <th>Dépôts et cautionnements versés</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des sommes versées à titre de dépôt ou cautionnement lorsque leur valeur recouvrable est durablement inférieure au montant versé</th>
+                </tr>
+                <tr class="lvl2976 child child-of-lvl297 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>2976</th>
+                    <th>Autres créances immobilisées</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la dépréciation des créances à long terme détenues par l’entreprise (autres que prêts, dépôts ou titres) lorsque leur valeur recouvrable est durablement inférieure au montant comptable</th>
+                </tr>
+                <!--Classe 3-->
+                <tr class="lvl3 parent" data-target="child-of-lvl3" style="background-color: rgb(0, 0, 255);">
+                    <th>3 <span class="arrow">▼</span></th>
+                    <th>Comptes de stocks et d'en-cours</th>
+                    <th>Bilan</th>
+                    <th>Regroupe tous les comptes qui enregistrent les biens que l’entreprise possède pour les vendres ou les transformer, comme les matières premières, les produits en cours de fabrication et les produits finis</th>
+                </tr>
+                <tr class="lvl31 child child-of-lvl3 nop" style="background-color: rgb(130, 130, 255);">
+                    <th>31</th>
+                    <th>Matières premières et fournitures</th>
+                    <th>Actif</th>
+                    <th>Enregistre l’achat et la valeur des matières premières et fournitures que l’entreprise utilise pour fabriquer ses produits</th>
+                </tr>
+                <tr class="lvl32 parent child child-of-lvl3" data-target="child-of-lvl32" style="background-color: rgb(130, 130, 255);">
+                    <th>32 <span class="arrow">▼</span></th>
+                    <th>Autres approvisionnements</th>
+                    <th>Actif</th>
+                    <th>Enregistre l’achat et la valeur des autres approvisionnements nécessaires au fonctionnement de l’entreprise, comme les petits matériels, emballages ou fournitures consommables</th>
+                </tr>
+                <tr class="lvl321 child child-of-lvl32 nop" style="background-color: rgb(225, 225, 255);">
+                    <th>321</th>
+                    <th>Matières consommables</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des matières consommables utilisées directement dans le fonctionnement ou la production de l’entreprise</th>
+                </tr>
+                <tr class="lvl322 parent child child-of-lvl32" data-target="child-of-lvl322" style="background-color: rgb(225, 225, 255);">
+                    <th>322 <span class="arrow">▼</span></th>
+                    <th>Fournitures consommables</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des fournitures consommables utilisées par l’entreprise pour son fonctionnement, comme le papier, l’encre ou le petit matériel de bureau</th>
+                </tr>
+                <tr class="lvl3221 child child-of-lvl322 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>3221</th>
+                    <th>Combustibles</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des combustibles consommés par l’entreprise, comme le fuel, le gaz ou le charbon, pour son fonctionnement ou sa production</th>
+                </tr>
+                <tr class="lvl3222 child child-of-lvl322 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>3222</th>
+                    <th>Produits d'entretien</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des produits d’entretien utilisés par l’entreprise pour nettoyer et entretenir ses locaux ou équipements</th>
+                </tr>
+                <tr class="lvl3223 child child-of-lvl322 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>3223</th>
+                    <th>Fournitures d'atelier et d'usine</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des fournitures utilisées directement dans les ateliers ou les usines pour la production, comme les outils, pièces de maintenance ou consommables industriels</th>
+                </tr>
+                <tr class="lvl3224 child child-of-lvl322 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>3224</th>
+                    <th>Fournitures de magasin</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des fournitures utilisées dans les magasins ou services commerciaux de l’entreprise, comme les sacs, étiquettes, emballages ou petits matériels de vente</th>
+                </tr>
+                <tr class="lvl3225 child child-of-lvl322 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>3225</th>
+                    <th>Fournitures de bureau</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des fournitures de bureau utilisées par l’entreprise, comme le papier, les stylos, les enveloppes ou autres consommables de bureau</th>
+                </tr>
+                <tr class="lvl326 parent child child-of-lvl32" data-target="child-of-lvl326" style="background-color: rgb(225, 225, 255);">
+                    <th>326 <span class="arrow">▼</span></th>
+                    <th>Emballages</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des emballages achetés par l’entreprise pour conditionner, protéger ou présenter ses produits</th>
+                </tr>
+                <tr class="lvl3261 child child-of-lvl326 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>3261</th>
+                    <th>Emballages perdus</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des emballages perdus ou non récupérables utilisés pour conditionner les produits, comme les cartons ou sacs à usage unique</th>
+                </tr>
+                <tr class="lvl3265 child child-of-lvl326 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>3265</th>
+                    <th>Emballages récupérables non identifiables</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des emballages récupérables mais dont l’entreprise ne peut pas suivre ou identifier individuellement, comme certaines caisses ou palettes partagées</th>
+                </tr>
+                <tr class="lvl3267 child child-of-lvl326 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>3267</th>
+                    <th>Emballages à usage mixte</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des emballages à usage mixte, c’est-à-dire pouvant être à la fois perdus et récupérables selon leur utilisation</th>
+                </tr>
+                <tr class="lvl33 parent child child-of-lvl3" data-target="child-of-lvl33" style="background-color: rgb(130, 130, 255);">
+                    <th>33 <span class="arrow">▼</span></th>
+                    <th>En-cours de production de biens</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des biens en cours de fabrication dans l’entreprise, qui ne sont pas encore des produits finis</th>
+                </tr>
+                <tr class="lvl331 child child-of-lvl33 nop" style="background-color: rgb(225, 225, 255);">
+                    <th>331</th>
+                    <th>Produits en cours</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des produits qui sont en cours de fabrication mais pas encore terminés</th>
+                </tr>
+                <tr class="lvl335 child child-of-lvl33 nop" style="background-color: rgb(225, 225, 255);">
+                    <th>335</th>
+                    <th>Travaux en cours</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des travaux ou prestations en cours réalisés par l’entreprise mais pas encore terminés ni facturés</th>
+                </tr>
+                <tr class="lvl34 parent child child-of-lvl3" data-target="child-of-lvl34" style="background-color: rgb(130, 130, 255);">
+                    <th>34 <span class="arrow">▼</span></th>
+                    <th>En-cours de production de services</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des services en cours de réalisation par l’entreprise, qui ne sont pas encore terminés ni facturés</th>
+                </tr>
+                <tr class="lvl341 child child-of-lvl34 nop" style="background-color: rgb(225, 225, 255);">
+                    <th>341</th>
+                    <th>Études en cours</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des études ou recherches en cours, pas encore terminées</th>
+                </tr>
+                <tr class="lvl345 child child-of-lvl34 nop" style="background-color: rgb(225, 225, 255);">
+                    <th>345</th>
+                    <th>Prestations de services en cours</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des services en cours de réalisation mais non encore facturés</th>
+                </tr>
+                <tr class="lvl35 parent child child-of-lvl3" data-target="child-of-lvl35" style="background-color: rgb(130, 130, 255);">
+                    <th>35 <span class="arrow">▼</span></th>
+                    <th>Stocks de produits</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des produits fabriqués par l’entreprise destinés à la vente</th>
+                </tr>
+                <tr class="lvl351 child child-of-lvl35 nop" style="background-color: rgb(225, 225, 255);">
+                    <th>351</th>
+                    <th>Produits intermédiaires</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des produits partiellement finis destinés à être transformés avant vente</th>
+                </tr>
+                <tr class="lvl355 child child-of-lvl35 nop" style="background-color: rgb(225, 225, 255);">
+                    <th>355</th>
+                    <th>Produits finis</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des produits entièrement fabriqués et prêts à être vendus</th>
+                </tr>
+                <tr class="lvl358 parent child child-of-lvl35" data-target="child-of-lvl358" style="background-color: rgb(225, 225, 255);">
+                    <th>358 <span class="arrow">▼</span></th>
+                    <th>Produits résiduels ou matières de récupération</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des déchets ou matériaux récupérables issus de la production</th>
+                </tr>
+                <tr class="lvl3581 child child-of-lvl358 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>3581</th>
+                    <th>Déchets</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des déchets produits par l’entreprise</th>
+                </tr>
+                <tr class="lvl3585 child child-of-lvl358 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>3585</th>
+                    <th>Rebuts</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des produits rejetés ou non conformes</th>
+                </tr>
+                <tr class="lvl3586 child child-of-lvl358 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>3586</th>
+                    <th>Matières de récupération</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des matières récupérées pouvant être réutilisées</th>
+                </tr>
+                <tr class="lvl36 child child-of-lvl3 nop" style="background-color: rgb(130, 130, 255);">
+                    <th>36</th>
+                    <th>(Compte à ouvrir, le cas échéant, sous l'intitulé « Stocks provenant d'immobilisations »)</th>
+                    <th>Actif</th>
+                    <th>Enregistre les biens fabriqués par l’entreprise mais destinés à son usage propre</th>
+                </tr>
+                <tr class="lvl37 child child-of-lvl3 nop" style="background-color: rgb(130, 130, 255);">
+                    <th>37</th>
+                    <th>Stocks de marchandises</th>
+                    <th>Actif</th>
+                    <th>Enregistre la valeur des marchandises achetées pour être revendues en l’état</th>
+                </tr>
+                <tr class="lvl38 child child-of-lvl3 nop" style="background-color: rgb(130, 130, 255);">
+                    <th>38</th>
+                    <th>(Le compte 38 peut être utilisé pour comptabiliser les stocks en voie d'acheminement, mis en dépôt ou donnés en consignation)</th>
+                    <th>Actif</th>
+                    <th>Enregistre les stocks en chemin, en dépôt chez un tiers ou donnés en consignation</th>
+                </tr>
+                <tr class="lvl39 parent child child-of-lvl3" data-target="child-of-lvl39" style="background-color: rgb(130, 130, 255);">
+                    <th>39 <span class="arrow">▼</span></th>
+                    <th>Dépréciations des stocks et en-cours</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la perte de valeur des stocks ou en-cours</th>
+                </tr>
+                <tr class="lvl391 child child-of-lvl39 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>391</th>
+                    <th>Dépréciations des matières premières et fournitures</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la perte de valeur des matières premières et fournitures</th>
+                </tr>
+                <tr class="lvl392 child child-of-lvl39 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>392</th>
+                    <th>Dépréciations des autres approvisionnements</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la perte de valeur des autres approvisionnements</th>
+                </tr>
+                <tr class="lvl393 child child-of-lvl39 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>393</th>
+                    <th>Dépréciations des en-cours de production de biens</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la perte de valeur des biens en cours de fabrication</th>
+                </tr>
+                <tr class="lvl394 child child-of-lvl39 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>394</th>
+                    <th>Dépréciations des en-cours de production de services</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la perte de valeur des services en cours de réalisation</th>
+                </tr>
+                <tr class="lvl395 child child-of-lvl39 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>395</th>
+                    <th>Dépréciations des stocks de produits</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la perte de valeur des produits finis ou intermédiaires</th>
+                </tr>
+                <tr class="lvl397 child child-of-lvl39 nop" style="background-color: rgb(223, 223, 223);">
+                    <th>397</th>
+                    <th>Dépréciations des stocks de marchandises</th>
+                    <th>Passif Technique</th>
+                    <th>Enregistre la perte de valeur des marchandises destinées à la vente</th>
+                </tr>
+                <!--Classe 4-->
+                <tr class="lvl4 parent" data-target="child-of-lvl4" style="background-color: rgb(255, 166, 0);">
+                    <th>4 <span class="arrow">▼</span></th>
+                    <th>Comptes de tiers</th>
+                    <th>Bilan</th>
+                    <th>Regroupe tous les comptes qui suivent l’argent que l’entreprise doit ou qu’on lui doit, comme les clients, les fournisseurs, l’état et le personnel</th>
+                </tr>
+                <!--Classe 5-->
+                <tr class="lvl5 parent" data-target="child-of-lvl5" style="background-color: rgb(255, 0, 255);">
+                    <th>5 <span class="arrow">▼</span></th>
+                    <th>Comptes financiers</th>
+                    <th>Bilan</th>
+                    <th>Regroupe tous les comptes qui enregistrent l’argent disponible ou placé par l’entreprise, comme la banque, la caisse et les placements financiers</th>
+                </tr>
+                <!--Classe 6-->
+                <tr class="lvl6 parent" data-target="child-of-lvl6" style="background-color: rgb(0, 234, 255);">
+                    <th>6 <span class="arrow">▼</span></th>
+                    <th>Comptes de charges</th>
+                    <th>Compte de résultat</th>
+                    <th>Regroupe tous les comptes qui enregistrent tous ce que l’entreprise dépenses pour fonctionner</th>
+                </tr>
+                <!--Classe 7-->
+                <tr class="lvl7 parent" data-target="child-of-lvl7" style="background-color: rgb(0, 185, 0);">
+                    <th>7 <span class="arrow">▼</span></th>
+                    <th>Comptes de produits</th>
+                    <th>Compte de résultat</th>
+                    <th>Regroupe tous les comptes qui enregistrent tout l’argent que l’entreprise gagne</th>
+                </tr>
+                <!--Classe 8-->
+                <tr class="lvl8 parent" data-target="child-of-lvl8" style="background-color: rgb(0, 0, 0); color: white;">
+                    <th>8 <span class="arrow">▼</span></th>
+                    <th>Comptes spéciaux</th>
+                    <th>Hors bilan et compte de résultat</th>
+                    <th>Regroupe des comptes particuliers qui ne sont pas des charges, des produits, des actifs ou des passifs classiques, comme certains engagements ou opérations spécifiques</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<script src="scriptpcg.js"></script>
+</body>

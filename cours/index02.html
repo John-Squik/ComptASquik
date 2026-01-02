@@ -2,55 +2,189 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <Title>CompASquik - Le bilan</Title>
+        <Title>CompASquik - La comptabilité</Title>
         <Link rel="stylesheet" href="style02.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
+    <body>
+        <header class="head">
+            <div class="head__logo">
+                <a href="../index.html">
+                    <img src="../assets/logo.png" alt="logo"/>
+                </a>
+            </div>
+            <div class="head__burger">
+                <nav class="head__nav">
+                    <a href="#" id="btn-cours">Cours <span class="arrow">▼</span></a>
+                    <a href="#" id="btn-calculs">Calculs <span class="arrow">▼</span></a>
+                    <a href="../PCG/indexpcg.html" id="btn-pcg">PCG</a>
+                </nav>
+                <ul id="cours-list" class="cours">
+                    <li><a href="../cours/index01.html">01 - La comptabilité</a></li>
+                    <li><a href="../cours/index02.html">02 - Le Bilan</a></li>
+                    <li><a href="../cours/index03.html">03 - Le compte de résultat</a></li>
+                    <li><a href="../cours/index04.html">04 - L’impact des opérations sur les documents de synthèse</a></li>
+                    <li><a href="../cours/index05.html">05 - La partie double et le fonctionnement des comptes</a></li>
+                    <li><a href="../cours/index06.html">06 - La comptabilisation des factures d’achats et de ventes</a></li>
+                    <li><a href="../cours/index07.html">07 - La comptabilisation des encaissements et des décaissements</a></li>
+                    <li><a href="../cours/index08.html">08 - La TVA</a></li>
+                    <li><a href="../cours/index09.html">09 - La prise en compte de la TVA dans les écritures</a></li>
+                    <li><a href="../cours/index10.html">10 - Les immobilisations</a></li>
+                    <li><a href="../cours/index11.html">11 - Le financement par emprunts</a></li>
+                    <li><a href="../cours/index12.html">12 - La comptabilisation des salaires et des charges sociales</a></li>
+                    <li><a href="../cours/index13.html">13 - Les amortissements</a></li>
+                    <li><a href="../cours/index14.html">14 - Les charges à payer et les produits à recevoir</a></li>
+                    <li><a href="../cours/index15.html">15 - Les charges et les produits constatées d’avances</a></li>
+                    <li><a href="../cours/index16.html">16 - Les dépréciations</a></li>
+                    <li><a href="../cours/index17.html">17 - Les provisions</a></li>
+                    <li><a href="../cours/index18.html">18 - Les stocks : Valorisation et comptabilisation</a></li>
+                    <li><a href="../cours/index19.html">Chapitre 19 :</a></li>
+                    <li><a href="../cours/index20.html">Chapitre 20 :</a></li>
+                    <li><a href="../cours/index21.html">Chapitre 21 :</a></li>
+                </ul>
+                <ul id="calculs-list" class="calculs">
+                    <li><a href="../calculs/indexvds.html">Valorisation des stocks</a></li>
+                    <li><a href="../calculs/indexamt.html">Amortissements</a></li>
+                    <li><a href="../calculs/indexemp.html">Emprunts</a></li>
+                    <li><a href="../calculs/indextva.html">TVA</a></li>
+                    <li><a href="../calculs/indexpct.html">Pourcentages</a></li>
+                </ul>
+            </div>
+        </header>
+        <main class="content">
+            <section class="section">
+            <h2>Le Bilan</h2>
+            <p>Le bilan est une photographie de l’entreprise à une date donnée (généralement 1 fois par an, le 31 décembre)</p>
+            </section>
+            <section class="section">
+            <h2>Comment ça fonctionne ?</h2>
+            <p>Les éléments se classent dans un tableau en suivant une logique comptable strict :</p>
+            <table>
+                <thead>
+                    <tr>
+                        <td><strong style="color: green;">Actif</strong></td>
+                        <td><strong style="color: red;">Passif</strong></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong style="color: green;">Actif immobilisé</strong></br> 
+                            Ce que l’entreprise possède durablement</br>
+                            </br>
+                            <strong>Immobilisations incorporelles</strong></br>
+                            Les éléments qui n’ont pas de corps</br>
+                            ▪	EX : brevet, logiciel de caisse…</br>
+                            </br>
+                            <strong>Immobilisations corporelles</strong></br> 
+                            Les éléments qui ont un corps</br>
+                            ▪	EX : matériel d’entreprise...</br>
+                            </br>
+                            <strong>Immobilisations financières</strong></br> 
+                            Les actifs financier</br>
+                            ▪	EX : caution...</br>
+                        </td>
+                        <td>
+                            <strong style="color: red;">Capitaux propres</strong></br> 
+                            Ce que l’entreprise doit durablement</br>
+                            </br>
+                            <strong>Capital social</strong></br> 
+                            Apport des actionnaires de l’entreprise</br>
+                            ▪	EX : un ami qui prête 3000 €…</br>
+                            </br>
+                            <strong>Réserves</strong></br>
+                            Bénéfices de l’entreprise non redistribué</br>
+                            ▪	EX : CA N-1 + 3000 €</br>
+                            </br>
+                            <strong>Report à nouveau</strong></br> 
+                            Ce qui reste des bénéfices N-1</br>
+                            ▪	EX : CA N-1 + 5000 € => 3000 € dans les réserves et 2000 € dans report</br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong style="color: green;">Actif circulant</strong></br>
+                            Ce que l’entreprise possède et qui génère régulièrement du mouvement</br>
+                            </br>
+                            <strong>Les stocks</strong></br>
+                            Les éléments que l’entreprise possède et consomme</br>
+                            ▪	EX : stylos, feuilles, cartouches d’imprimantes…</br>
+                            </br>
+                            <strong>Les créances</strong></br>
+                            Les ventes de l’entreprise encaisser à crédit</br>
+                            ▪	EX : clients qui paieront plus tard…</br>
+                            </br>
+                            <strong>Les disponibilités</strong></br>
+                            L'argent qui rentre et sort</br>
+                            ▪	EX : trésorerie, banque...
+                        </td>
+                        <td>
+                            <strong style="color: red;">Dettes</strong></br> 
+                            Ce que l’entreprise doit et qui génère régulièrement du mouvement</br>
+                            </br>
+                            <strong>Emprunts et dettes financières</strong></br> 
+                            Ce que l’on doit rembourser sur l’avancement financier</br>
+                            ▪	EX : mensualité crédit bancaire...</br>
+                            </br>
+                            <strong>Dettes fournisseurs</strong></br>
+                            Ce que l’on doit rembourser sur les crédits fournisseurs</br>
+                            ▪	EX : Fournisseur de fournitures de bureau à crédit...</br>
+                            </br>
+                            <strong>Autres dettes</strong></br> 
+                            Les autres dettes n’appartenant pas aux catégories précédentes</br>
+                            ▪	EX : États, taxes, TVA...
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Les <strong style="color: green;">Actifs</strong> sont toujours à gauche, tandis que les <strong style="color: red;">Passifs</strong> sont toujours à droite dans le bilan</br>
+            On commence les écritures par ce qui est durable, pour terminer sur ce qui change régulièrement.</p> 
+            </section>
+            <section class="section">
+            <h2 style="color: red;">A retenir</h2>
+            <p><strong style="color: green;">Les actifs</strong> doivent <strong>TOUJOURS ÊTRE ÉGALE AUX</strong> <strong style="color: red;">Passifs</strong></br>
+            Actif = Capitaux propres + Dettes </br>
+            Capitaux propres = Actif – Dettes </br>
+            Cet équillibre est obligatoire car si <strong>la balance</strong> penche d'un côté ou de l'autre, c'est que les comptes sont faux !</p>
+            </section>
+            <section class="section">
+            <h2>Exemple</h2>
+            <p>Squik créer une entreprise nommé "Le gland, c'est la vie !". La 1ère année, il réalise les opérations suivantes : </br>
+            Création de l'entreprise : Squik capitalise 40 000 € dans sa société</br>
+            Premier investissement : Il investi dans un fourgon d'une valeur de 18 000 €</p>
+            <p>Squik a 40 000 € dans le capital de sa société, donc en Passif <strong>MAIS</strong> aussi en actif dans ses disponibilités.</br>
+            Cependant, il dépense 18 000 € dans un fourgon, donc dans ses immobilisations corporelles.</p>
+            <p>Il doit donc réduire ses disponibilité à la hauteur de sa dépense,</br> 
+            soit 40 000 € de départ - 18 000 € d'investissement = 22 000 € restant dans ses disponibilités.</p>
+                <table class="bilan">
+                    <thead>
+                        <tr>
+                        <th colspan="2">ACTIF</th>
+                        <th colspan="2">PASSIF</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>Immobilisations corporelles</td>
+                        <td class="montant">18 000 €</td>
+                        <td>Capital</td>
+                        <td class="montant">40 000 €</td>
+                        </tr>
+                        <tr>
+                        <td>Disponibilités</td>
+                        <td class="montant">22 000 €</td>
+                        </tr>
+                        <tr class="total">
+                        <td>Total Actif</td>
+                        <td class="montant">40 000 €</td>
+                        <td>Total Passif</td>
+                        <td class="montant">40 000 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Le bilan est équillibré, ont retrouve la même somme des deux côtés, donc <strong>l'écriture comptable</strong> a bien été effectuer correctement.</p>
+            </section>
+        </main>
+    <script src="script02.js"></script>
+    </body>
 </html>
-<body>
-    <header class="head">
-        <div class="head__logo">
-            <a href="../index.html">
-                <img src="../assets/logo.png" alt="logo"/>
-            </a>
-        </div>
-        <div class="head__burger">
-            <nav class="head__nav">
-                <a href="#" id="btn-cours">Cours <span class="arrow">▼</span></a>
-                <a href="#" id="btn-calculs">Calculs <span class="arrow">▼</span></a>
-                <a href="../PCG/indexpcg.html" id="btn-pcg">PCG</a>
-            </nav>
-            <ul id="cours-list" class="cours">
-                <li><a href="../cours/index01.html">01 - La comptabilité</a></li>
-                <li><a href="../cours/index02.html">02 - Le Bilan</a></li>
-                <li><a href="../cours/index03.html">03 - Le compte de résultat</a></li>
-                <li><a href="../cours/index04.html">04 - L’impact des opérations sur les documents de synthèse</a></li>
-                <li><a href="../cours/index05.html">05 - La partie double et le fonctionnement des comptes</a></li>
-                <li><a href="../cours/index06.html">06 - La comptabilisation des factures d’achats et de ventes</a></li>
-                <li><a href="../cours/index07.html">07 - La comptabilisation des encaissements et des décaissements</a></li>
-                <li><a href="../cours/index08.html">08 - La TVA</a></li>
-                <li><a href="../cours/index09.html">09 - La prise en compte de la TVA dans les écritures</a></li>
-                <li><a href="../cours/index10.html">10 - Les immobilisations</a></li>
-                <li><a href="../cours/index11.html">11 - Le financement par emprunts</a></li>
-                <li><a href="../cours/index12.html">12 - La comptabilisation des salaires et des charges sociales</a></li>
-                <li><a href="../cours/index13.html">13 - Les amortissements</a></li>
-                <li><a href="../cours/index14.html">14 - Les charges à payer et les produits à recevoir</a></li>
-                <li><a href="../cours/index15.html">15 - Les charges et les produits constatées d’avances</a></li>
-                <li><a href="../cours/index16.html">16 - Les dépréciations</a></li>
-                <li><a href="../cours/index17.html">17 - Les provisions</a></li>
-                <li><a href="../cours/index18.html">18 - Les stocks : Valorisation et comptabilisation</a></li>
-                <li><a href="../cours/index19.html">Chapitre 19 :</a></li>
-                <li><a href="../cours/index20.html">Chapitre 20 :</a></li>
-                <li><a href="../cours/index21.html">Chapitre 21 :</a></li>
-            </ul>
-            <ul id="calculs-list" class="calculs">
-                <li><a href="../calculs/indexvds.html">Valorisation des stocks</a></li>
-                <li><a href="../calculs/indexamt.html">Amortissements</a></li>
-                <li><a href="../calculs/indexemp.html">Emprunts</a></li>
-                <li><a href="../calculs/indextva.html">TVA</a></li>
-                <li><a href="../calculs/indexpct.html">Pourcentages</a></li>
-            </ul>
-        </div>
-    </header>
-<script src="script02.js"></script>
-</body>

@@ -188,4 +188,45 @@ body {
 .bilan .total td {
   font-weight: bold;
   background-color: #ddd;
+}
+
+.page-content {
+  flex: 1;
+}
+
+.chapter-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #111;
+  box-sizing: border-box;
+}
+.chapter-nav__item {
+  display: flex;
+  flex-direction: column;
+  max-width: 45%;
+  text-decoration: none;
+  color: #fff;
+}
+.chapter-nav__item.prev {
+  align-items: flex-start;
+}
+.chapter-nav__item.next {
+  align-items: flex-end;
+}
+.chapter-nav__arrow {
+  font-size: 2rem;
+  line-height: 1;
+}
+.chapter-nav__label {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-top: 4px;
+}
+.chapter-nav__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }/*# sourceMappingURL=style02.css.map */

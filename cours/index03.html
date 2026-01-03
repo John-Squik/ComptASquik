@@ -6,51 +6,171 @@
         <Link rel="stylesheet" href="style03.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-</html>
-<body>
-    <header class="head">
-        <div class="head__logo">
-            <a href="../index.html">
-                <img src="../assets/logo.png" alt="logo"/>
+    <body>
+        <header class="head">
+            <div class="head__logo">
+                <a href="../index.html">
+                    <img src="../assets/logo.png" alt="logo"/>
+                </a>
+            </div>
+            <div class="head__burger">
+                <nav class="head__nav">
+                    <a href="#" id="btn-cours">Cours <span class="arrow">▼</span></a>
+                    <a href="#" id="btn-calculs">Calculs <span class="arrow">▼</span></a>
+                    <a href="../PCG/indexpcg.html" id="btn-pcg">PCG</a>
+                </nav>
+                <ul id="cours-list" class="cours">
+                    <li><a href="../cours/index01.html">01 - La comptabilité</a></li>
+                    <li><a href="../cours/index02.html">02 - Le Bilan</a></li>
+                    <li><a href="../cours/index03.html">03 - Le compte de résultat</a></li>
+                    <li><a href="../cours/index04.html">04 - L’impact des opérations sur les documents de synthèse</a></li>
+                    <li><a href="../cours/index05.html">05 - La partie double et le fonctionnement des comptes</a></li>
+                    <li><a href="../cours/index06.html">06 - La comptabilisation des factures d’achats et de ventes</a></li>
+                    <li><a href="../cours/index07.html">07 - La comptabilisation des encaissements et des décaissements</a></li>
+                    <li><a href="../cours/index08.html">08 - La TVA</a></li>
+                    <li><a href="../cours/index09.html">09 - La prise en compte de la TVA dans les écritures</a></li>
+                    <li><a href="../cours/index10.html">10 - Les immobilisations</a></li>
+                    <li><a href="../cours/index11.html">11 - Le financement par emprunts</a></li>
+                    <li><a href="../cours/index12.html">12 - La comptabilisation des salaires et des charges sociales</a></li>
+                    <li><a href="../cours/index13.html">13 - Les amortissements</a></li>
+                    <li><a href="../cours/index14.html">14 - Les charges à payer et les produits à recevoir</a></li>
+                    <li><a href="../cours/index15.html">15 - Les charges et les produits constatées d’avances</a></li>
+                    <li><a href="../cours/index16.html">16 - Les dépréciations</a></li>
+                    <li><a href="../cours/index17.html">17 - Les provisions</a></li>
+                    <li><a href="../cours/index18.html">18 - Les stocks : Valorisation et comptabilisation</a></li>
+                    <li><a href="../cours/index19.html">Chapitre 19 :</a></li>
+                    <li><a href="../cours/index20.html">Chapitre 20 :</a></li>
+                    <li><a href="../cours/index21.html">Chapitre 21 :</a></li>
+                </ul>
+                <ul id="calculs-list" class="calculs">
+                    <li><a href="../calculs/indexvds.html">Valorisation des stocks</a></li>
+                    <li><a href="../calculs/indexamt.html">Amortissements</a></li>
+                    <li><a href="../calculs/indexemp.html">Emprunts</a></li>
+                    <li><a href="../calculs/indextva.html">TVA</a></li>
+                    <li><a href="../calculs/indexpct.html">Pourcentages</a></li>
+                </ul>
+            </div>
+        </header>
+        <main class="content">
+            <section class="section">
+            <h2>Le compte de résultat</h2>
+            <p>Le compte de résultat est en complément du bilan et permet de vérifier si une entreprise est solvable ou à perte</p>
+            </section>
+            <section class="section">
+            <h2>Comment ça fonctionne ?</h2>
+            <p>Les éléments se classent dans un tableau en suivant une logique comptable strict :</p>
+            <table>
+                <thead>
+                    <tr>
+                        <td><strong style="color: red;">Charge (ce que l'entreprise dépense)</strong></td>
+                        <td><strong style="color: green;">Produit (ce que l'entreprise gagne)</strong></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Charges d’exploitations</strong></br>
+                            Ce que l’entreprise dépense au quotidien</br>
+                            ▪	EX : achats de marchandises, loyer, salaires…</br>
+                            </br>
+                            <strong>Charges financières</strong></br> 
+                            Ce sont les coûts liés à la finance</br>
+                            ▪	EX : agios, intérêts sur emprunts bancaire…</br>
+                            </br>
+                            <strong>Charges exceptionnelles</strong></br> 
+                            Ce sont les dépenses ponctuelles…</br>
+                            ▪	EX : amendes, pénalités...</br>
+                        </td>
+                        <td>
+                            <strong>Produits d’exploitations</strong></br> 
+                            Ce que l’entreprise gagne au quotidien</br>
+                            ▪	EX : ventes, prestations de services…</br>
+                            </br>
+                            <strong>Produits financiers</strong></br>
+                            Ce sont les gains liés à la finance</br>
+                            ▪	EX : intérêts placement bancaire…</br>
+                            </br>
+                            <strong>Produits exceptionnels</strong></br> 
+                            Ce sont les gains ponctuels</br>
+                            ▪	EX : vente d’un produit plus chère que sa valeur comptable...</br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong style="color: green;">Résultat bénéficiaire</strong></br>
+                            Si les produits > aux charges
+                        </td>
+                        <td>
+                            <strong style="color: red;">Résultat à perte</strong></br> 
+                            Si les charges > aux produits
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Les <strong style="color: green;">Produits</strong> sont toujours à droite, tandis que les <strong style="color: red;">Charges</strong> sont toujours à gauche dans le compte de résultat</br>
+            On commence les écritures par le quotidien, suivi par le financier, pour terminer par les écritures exceptionnelles.</p> 
+            </section>
+            <section class="section">
+            <h2 style="color: red;">A retenir</h2>
+            <p>La différence entre <strong style="color: green;">Les produits</strong> et <strong style="color: red;">Les charges</strong> permettent de calculer un résultat à ajouter dans <strong>l'actif du bilan</strong>.</br>
+            Ajouter le résultat en positif s'il est bénéficiaire ou en négatif s'il est à perte, permet d'équillibré <strong>la balance comptable</strong> sur le bilan.</p>
+            </section>
+            <section class="section">
+            <h2>Exemple</h2>
+            <p>Squik doit établir le compte de résultat de son entreprise sur la base : </br>
+            Ventes de marchandises : 30 500 €</br>
+            Achats de marchandises : 5 500 €</br>
+            Impôts et taxes dû : 500 €</br>
+            Salaires et charges sociales : 9 080 €</p>
+            <p>Il faut commencer par déterminer ce qui entre en charge et ce qui entre en produit :</p>
+            <p>Les ventes de marchandises, c'est de l'argent qui rentre dans la société, donc <strong style="color: green;">produit</strong>.</br>
+            En revanche, les achats de marchandises, les impôts et taxes dû et les salaires sont de l'argent qui sortent de la société, donc <strong style="color: red;">charge</strong>.</p>
+                <table class="bilan">
+                    <thead>
+                        <tr>
+                        <th colspan="2">Charge</th>
+                        <th colspan="2">Produit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>Achats de marchandises</td>
+                        <td class="montant">5 500 €</td>
+                        <td>Ventes de marchandises</td>
+                        <td class="montant">30 500 €</td>
+                        </tr>
+                        <tr>
+                        <td>Impôts et taxes dû</td>
+                        <td class="montant">500 €</td>
+                        </tr>
+                        <tr>
+                        <td>Salaires et charges sociales</td>
+                        <td class="montant">9 080 €</td>
+                        </tr>
+                        <tr class="total">
+                        <td>Total Charge</td>
+                        <td class="montant">15 080 €</td>
+                        <td>Total Produit</td>
+                        <td class="montant">30 500 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Ensuite, on calcule les charges de 15 080 € - les produits de 30 500 €, ce qui nous donne un résultat <strong style="color: green;">bénéficiaire</strong> de <strong>15 420 €</strong>.</br>
+                Ce résultat seras ajouter en positif sur l'actif du bilan et détermine que l'entreprise est solvable.</p>
+            </section>
+        </main>
+        <nav class="chapter-nav">
+            <a href="index02.html" class="chapter-nav__item prev">
+                <span class="chapter-nav__arrow">&#10094;</span>
+                <span class="chapter-nav__label">Chapitre précédent</span>
+                <span class="chapter-nav__title">Le bilan</span>
             </a>
-        </div>
-        <div class="head__burger">
-            <nav class="head__nav">
-                <a href="#" id="btn-cours">Cours <span class="arrow">▼</span></a>
-                <a href="#" id="btn-calculs">Calculs <span class="arrow">▼</span></a>
-                <a href="../PCG/indexpcg.html" id="btn-pcg">PCG</a>
-            </nav>
-            <ul id="cours-list" class="cours">
-                <li><a href="../cours/index01.html">01 - La comptabilité</a></li>
-                <li><a href="../cours/index02.html">02 - Le Bilan</a></li>
-                <li><a href="../cours/index03.html">03 - Le compte de résultat</a></li>
-                <li><a href="../cours/index04.html">04 - L’impact des opérations sur les documents de synthèse</a></li>
-                <li><a href="../cours/index05.html">05 - La partie double et le fonctionnement des comptes</a></li>
-                <li><a href="../cours/index06.html">06 - La comptabilisation des factures d’achats et de ventes</a></li>
-                <li><a href="../cours/index07.html">07 - La comptabilisation des encaissements et des décaissements</a></li>
-                <li><a href="../cours/index08.html">08 - La TVA</a></li>
-                <li><a href="../cours/index09.html">09 - La prise en compte de la TVA dans les écritures</a></li>
-                <li><a href="../cours/index10.html">10 - Les immobilisations</a></li>
-                <li><a href="../cours/index11.html">11 - Le financement par emprunts</a></li>
-                <li><a href="../cours/index12.html">12 - La comptabilisation des salaires et des charges sociales</a></li>
-                <li><a href="../cours/index13.html">13 - Les amortissements</a></li>
-                <li><a href="../cours/index14.html">14 - Les charges à payer et les produits à recevoir</a></li>
-                <li><a href="../cours/index15.html">15 - Les charges et les produits constatées d’avances</a></li>
-                <li><a href="../cours/index16.html">16 - Les dépréciations</a></li>
-                <li><a href="../cours/index17.html">17 - Les provisions</a></li>
-                <li><a href="../cours/index18.html">18 - Les stocks : Valorisation et comptabilisation</a></li>
-                <li><a href="../cours/index19.html">Chapitre 19 :</a></li>
-                <li><a href="../cours/index20.html">Chapitre 20 :</a></li>
-                <li><a href="../cours/index21.html">Chapitre 21 :</a></li>
-            </ul>
-            <ul id="calculs-list" class="calculs">
-                <li><a href="../calculs/indexvds.html">Valorisation des stocks</a></li>
-                <li><a href="../calculs/indexamt.html">Amortissements</a></li>
-                <li><a href="../calculs/indexemp.html">Emprunts</a></li>
-                <li><a href="../calculs/indextva.html">TVA</a></li>
-                <li><a href="../calculs/indexpct.html">Pourcentages</a></li>
-            </ul>
-        </div>
-    </header>
-<script src="script03.js"></script>
-</body>
+            <a href="index04.html" class="chapter-nav__item next">
+                <span class="chapter-nav__arrow">&#10095;</span>
+                <span class="chapter-nav__label">Chapitre suivant</span>
+                <span class="chapter-nav__title">L’impact des opérations sur les documents de synthèse</span>
+            </a>
+        </nav>
+    <script src="script03.js"></script>
+    </body>
+</html>

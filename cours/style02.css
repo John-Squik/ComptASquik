@@ -201,6 +201,13 @@ body {
   background: #111;
   box-sizing: border-box;
 }
+.chapter-nav__arrow {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.chapter-nav__item:hover .chapter-nav__arrow {
+  transform: scale(1.15);
+  color: #3b82f6;
+}
 .chapter-nav__item {
   display: flex;
   flex-direction: column;

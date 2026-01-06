@@ -6,51 +6,981 @@
         <Link rel="stylesheet" href="style05.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-</html>
-<body>
-    <header class="head">
-        <div class="head__logo">
-            <a href="../index.html">
-                <img src="../assets/logo.png" alt="logo"/>
+    <body>
+        <header class="head">
+            <div class="head__logo">
+                <a href="../index.html">
+                    <img src="../assets/logo.png" alt="logo"/>
+                </a>
+            </div>
+            <div class="head__burger">
+                <nav class="head__nav">
+                    <a href="#" id="btn-cours">Cours <span class="arrow">▼</span></a>
+                    <a href="#" id="btn-calculs">Calculs <span class="arrow">▼</span></a>
+                    <a href="../PCG/indexpcg.html" id="btn-pcg">PCG</a>
+                </nav>
+                <ul id="cours-list" class="cours">
+                    <li><a href="../cours/index01.html">01 - La comptabilité</a></li>
+                    <li><a href="../cours/index02.html">02 - Le Bilan</a></li>
+                    <li><a href="../cours/index03.html">03 - Le compte de résultat</a></li>
+                    <li><a href="../cours/index04.html">04 - L’impact des opérations sur les documents de synthèse</a></li>
+                    <li><a href="../cours/index05.html">05 - La partie double et le fonctionnement des comptes</a></li>
+                    <li><a href="../cours/index06.html">06 - La comptabilisation des factures d’achats et de ventes</a></li>
+                    <li><a href="../cours/index07.html">07 - La comptabilisation des encaissements et des décaissements</a></li>
+                    <li><a href="../cours/index08.html">08 - La TVA</a></li>
+                    <li><a href="../cours/index09.html">09 - La prise en compte de la TVA dans les écritures</a></li>
+                    <li><a href="../cours/index10.html">10 - Les immobilisations</a></li>
+                    <li><a href="../cours/index11.html">11 - Le financement par emprunts</a></li>
+                    <li><a href="../cours/index12.html">12 - La comptabilisation des salaires et des charges sociales</a></li>
+                    <li><a href="../cours/index13.html">13 - Les amortissements</a></li>
+                    <li><a href="../cours/index14.html">14 - Les charges à payer et les produits à recevoir</a></li>
+                    <li><a href="../cours/index15.html">15 - Les charges et les produits constatées d’avances</a></li>
+                    <li><a href="../cours/index16.html">16 - Les dépréciations</a></li>
+                    <li><a href="../cours/index17.html">17 - Les provisions</a></li>
+                    <li><a href="../cours/index18.html">18 - Les stocks : Valorisation et comptabilisation</a></li>
+                    <li><a href="../cours/index19.html">Chapitre 19 :</a></li>
+                    <li><a href="../cours/index20.html">Chapitre 20 :</a></li>
+                    <li><a href="../cours/index21.html">Chapitre 21 :</a></li>
+                </ul>
+                <ul id="calculs-list" class="calculs">
+                    <li><a href="../calculs/indexvds.html">Valorisation des stocks</a></li>
+                    <li><a href="../calculs/indexamt.html">Amortissements</a></li>
+                    <li><a href="../calculs/indexemp.html">Emprunts</a></li>
+                    <li><a href="../calculs/indextva.html">TVA</a></li>
+                    <li><a href="../calculs/indexpct.html">Pourcentages</a></li>
+                </ul>
+            </div>
+        </header>
+        <main class="content">
+            <section class="section">
+            <h2>La partie double et le fonctionnement des comptes</h2>
+            <p>Les pièces comptables sont classées via un système de <strong>codification décimale, le code comptable</strong>.</br>
+            Il permet de se repérer dans les comptes, afin de comprendre la nature exacte de l’enregistrement de chaque pièce comptable dans <strong>le journal des écritures comptables quotidienne</strong>.</br>
+            À chaque opérations, 2 numéros minimums y sont affectés afin de préciser la classe du compte et sa nature précise.</p>
+            <p>Voici un tableau des classes principales à connaître, ranger dans les comptes correspondants :</p>
+            <table>
+                <thead>
+                    <tr>
+                        <td><strong>Les comptes du bilan</strong></td>
+                        <td><strong>Les comptes du compte de résultat</strong></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Classes 1 : Comptes de capitaux</strong></br>
+                            Regroupe toutes les ressources stables de l'entreprise</br>
+                            ▪	EX : capital, réserves, emprunts à long terme, dettes financières durables...</br>
+                            </br>
+                            <strong>Classes 2 : Comptes d'immobilisations</strong></br> 
+                            Regroupe tous les comptes qui enregistrent les biens durablent que possède l’entreprise</br>
+                            ▪	EX : les bâtiments, le matériel, les brevets…</br>
+                            </br>
+                            <strong>Classes 3 : Comptes de stocks et d'en-cours</strong></br> 
+                            Regroupe tous les comptes qui enregistrent les biens que l’entreprise possède pour les vendres ou les transformer</br>
+                            ▪	EX : les matières premières, les produits en cours de fabrication, les produits finis...</br>
+                            </br>
+                            <strong>Classes 4 : Comptes de tiers</strong></br>
+                            Regroupe tous les comptes qui suivent l’argent que l’entreprise doit ou qu’on lui doit</br>
+                            ▪	EX : les clients, les fournisseurs, l’état, le personnel...</br>
+                            </br>
+                            <strong>Classes 5 : Comptes financiers</strong></br> 
+                            Regroupe tous les comptes qui enregistrent l’argent disponible ou placé par l’entreprise</br>
+                            ▪	EX : la banque, la caisse, les placements financiers…
+                        </td>
+                        <td>
+                            <strong>Classes 6 : Comptes de charges</strong></br> 
+                            Regroupe tous les comptes qui enregistrent tous ce que l’entreprise dépenses pour fonctionner</br>
+                            ▪	EX : achats, salaires, crédits…</br>
+                            </br>
+                            <strong>Classes 7 : Comptes de produits</strong></br>
+                            Regroupe tous les comptes qui enregistrent tout l’argent que l’entreprise gagne</br>
+                            ▪	EX : ventes, remboursements clients, intérêts placement bancaire…
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Les codes comptables permettent de catégoriser de manière précise la nature de la transaction.
+            Pour connaître la codification décimale, ont peux se reporter sur le <a href="../PCG/indexpcg.html">PCG</a> (Plan Comptable Général) qui est l’équivalent de la bible comptable, mis à jour chaque année par le ministère des finances et de la comptabilité.</p>
+            <p>Ces codes vont permettrent de classer les différentes transactions de l'entreprise dans un ou plusieurs <strong>Journaux</strong> tenues quotidiennements.</br>
+            Les journaux servent à reporter les transactions chaque jours et vont à terme, permettrent d'avoir un suivi chronologique des achats et ventes de l'entreprise.</br>
+            Celon la taille de la structure, il peut y avoir un jounal général ou plusieurs journaux qui catégorisent les éléments que l'on rentre en fonction de leurs natures :</p>
+            <p><strong>Le Journal des achats (HA)</strong> : Qui regroupe toutes les acquisitions de biens, de matières premières et de services, y compris les frais généraux tels que les loyers, les frais de téléphone ou encore la publicité</p>
+            <p><strong>Le journal des ventes (VE)</strong> : Qui enregistre toutes les factures de ventes réalisées par l’entreprise</p>
+            <p><strong>Le journal de banque (BQ)</strong> : Qui couvrent toutes les transactions financières liées aux mouvements de banque</p>
+            <p><strong>Le journal de caisse (CA)</strong> : Qui couvrent toutes les transactions financières liées aux mouvements de caisse</p>
+            <p><strong>Le journal des à nouveaux (AN)</strong> : Qui sert à reporter les soldes de l’année précédente</p>
+            <p><strong>Le journal des opérations diverses (OD)</strong> : Qui est utilisé pour toutes les opérations qui ne rentrent pas dans les catégories précédentes</p>
+            </section>
+            <section class="section">
+                <h2>Comment ça fonctionne ?</h2>
+                <p>Admettons qu'une entreprise receptionne, le 01 janvier de l'année N, une facture "F 001" de 1000 € pour l'achat de marchandises.</br>
+                Tout d'abord, entrons la facture dans un journal général :</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <td><strong>Jour</strong></td>
+                            <td><strong>N° pièce</strong></td>
+                            <td><strong>Libellé</strong></td>
+                            <td><strong>Code</strong></td>
+                            <td><strong>Intitulé</strong></td>
+                            <td><strong>Justificatif</strong></td>
+                            <td><strong>Débit</strong></td>
+                            <td><strong>Crédit</strong></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/01/N</td>
+                            <td>F 001</td>
+                            <td>Facture d'achat de marchandises</td>
+                            <td>607</td>
+                            <td>Achat de marchandises</td>
+                            <td>Facture 001</td>
+                            <td>1000 €</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Comme constaté dans le tableau ci-dessus, on s'aperçoit qu'on entre <strong>le jour</strong> de l'achat, <strong>le numéro</strong> de la facture, <strong>le libellé</strong> de l'achat effectué, <strong>le code comptable</strong> reporté depuis le PCG, <strong>l'intitulé</strong> du code comptable, le lien vers <strong>le justificatif</strong> correspondant à l'achat et les colonnes <strong>débit/crédit</strong>.</p>
+                <p>La logique de l'écriture comptable veut que l'on va débiter le compte associé aux achats de marchandises pour en retirer la somme dépenser.</br>
+                Cependant, comme expliquer dans les chapitres précédents, <strong style="color: red;">le journal tout comme le bilan doit être parfaitement équillibré</strong> entre les débits et les crédits.</br>
+                Donc quoi qu'il arrive, lorsqu'un montant est rentrer dans une colonne, le même montant doit être rentrer dans la colonne adverse !</p>
+                <p>Reprenons l'écriture comptable effectué ci-dessus :</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <td><strong>Jour</strong></td>
+                            <td><strong>N° pièce</strong></td>
+                            <td><strong>Libellé</strong></td>
+                            <td><strong>Code</strong></td>
+                            <td><strong>Intitulé</strong></td>
+                            <td><strong>Justificatif</strong></td>
+                            <td><strong>Débit</strong></td>
+                            <td><strong>Crédit</strong></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/01/N</td>
+                            <td>F 001</td>
+                            <td>Facture d'achat de marchandises</td>
+                            <td>607</td>
+                            <td>Achat de marchandises</td>
+                            <td>Facture 001</td>
+                            <td>1 000 €</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>01/01/N</td>
+                            <td>R 0101</td>
+                            <td>Sortie bancaire</td>
+                            <td>512</td>
+                            <td>Banque</td>
+                            <td>Relevé bancaire du 01/01/N</td>
+                            <td>-</td>
+                            <td>1 000 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Cette écriture inscrit la facture d'achat débitrice de 1 000 € et inscrit le paiement bancaire effectué en créditant le compte banque de 1 000 € également.</br>
+                Les comptes sont maintenant équillibré et juste.</p>
+                <p>Ce style d'écriture est le principe fondamentale de l'écriture comptable et s'appelle <strong style="color: green;">La partie double</strong> !</p>
+                <p>La partie double, c'est le fait d'inscrire 2 fois (ou plus) un élément rentrer en écriture afin d'équillibré les comptes et de justifier chaque mouvement financier avec justesse et rigueur.</p>
+            </section>
+            <section class="section">
+                <h2>Et ensuite ?</h2>
+                <p>Une fois le journal établi avec les écritures quotidiennes, il faut trier et reporter la totalité de ces dernières afin d'épurer et de vérifier la bonne tenue des comptes.</br>
+                Pour ce faire, on va établir mensuellement <strong>un grand livre</strong> qui va regroupper toutes les écritures par ordres de types de comptes.</p>
+                <p>Reportons les écritures inscrites dans la partie journal, jusqu'au grand livre :</p>
+                <table class="compta-table">
+                    <caption>512 – Banques</caption>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Pièce</th>
+                            <th>Journal</th>
+                            <th class="right">Débit</th>
+                            <th class="right">Crédit</th>
+                            <th class="right">Solde</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/01/N</td>
+                            <td>Relevé bancaire du 01/01/N</td>
+                            <td>BQ</td>
+                            <td class="right"></td>
+                            <td class="right">1 000 €</td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr class="solde">
+                            <td>31/01/N</td>
+                            <td colspan="4">Solde créditeur</td>
+                            <td class="right">1 000 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="compta-table">
+                    <caption>607 – Achat de marchandises</caption>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Pièce</th>
+                            <th>Journal</th>
+                            <th class="right">Débit</th>
+                            <th class="right">Crédit</th>
+                            <th class="right">Solde</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/01/N</td>
+                            <td>Facture 001</td>
+                            <td>HA</td>
+                            <td class="right">1 000 €</td>
+                            <td class="right"></td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr class="solde">
+                            <td>31/01/N</td>
+                            <td colspan="4">Solde Débiteur</td>
+                            <td class="right">1 000 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Comme constaté ci-dessus, on s'aperçois que chaque écritures du journal est reporté dans les codes de comptes correspondant. C'est cette partie qui constitue le grand livre comptable. Cette partie permet également de calculer les totaux pour les réduires à une seule et même ligne créditrice ou débitrice.</p>
+                <p>Maintenant que c'est fait, il reste une vérification importante à effectuer avant de reporter tous ces éléments dans le bilan et dans le compte de résultat. Cette partie s'appelle <strong>La balance comptable</strong> !</br>
+                Elle permet de vérifier si tous les comptes reporter dans les écritures du journal et du grand livre on été correctement effectué et si le total permet d'avoir un équillibre parfait entre les débits et les crédits :</p>
+                <table class="compta-table">
+                    <thead>
+                        <tr>
+                            <th>N° de compte</th>
+                            <th>Intitulé</th>
+                            <th class="right">Solde débiteur</th>
+                            <th class="right">Solde créditeur</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>512</td>
+                            <td>Banques</td>
+                            <td class="right"></td>
+                            <td class="right">1 000 €</td>
+                        </tr>
+                        <tr>
+                            <td>607</td>
+                            <td>Achat de marchandises</td>
+                            <td class="right">1 000 €</td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr class="solde">
+                            <td colspan="2">Total balance</td>
+                            <td class="right">1 000 €</td>
+                            <td class="right">1 000 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Comme constaté ci-dessus, on s'aperçois que la balance est parfaitement équillibré entre le total des soldes débiteur et créditeur.</br>
+                À partir de là, il suffit de rentrer ces éléments dans les comptes correspondant, par exemple le compte 512 banque iras côté bilan, tandis que le compte 607 iras côté compte de résultat.</p>
+            </section>
+            <section class="section">
+                <h2 style="color: red;">A retenir</h2>
+                <p><strong style="color: red;">La codification décimale</strong> est la numérotation issue du plan comptable générale qui permet de se repérer dans l'inscription des écritures comptable et la nature exacte de ses dernières.</p>
+                <p><strong style="color: blue;">Le journal</strong> est la partie de l'écriture comptable que l'on rempli quotidiennement et qui inscrit les mouvements bancaire chronologiquement.</p>
+                <p><strong style="color: blue;">Le grand livre</strong> est la partie de l'écriture comptable que l'on rempli mensuellement et qui inscrit les mouvements bancaire par type de compte.</p>
+                <p><strong style="color: blue;">La balance comptable</strong> est la partie de l'écriture comptable que l'on rempli mensuellement et qui permet de vérifier la justesse des comptes et leur équillibre.</p>
+                <p><strong style="color: green;">La partie double</strong> est le principe fondamentale de l'écriture comptable. C'est le fait d'incrire minimum en double, les comptes rentrer dans les écritures comptables.</p>
+            </section>
+            <section class="section">
+                <h2>Exemple</h2>
+                <p>Squik doit établir les comptes de son entreprise au 31 janvier de l'année N. Voivi le bilan de l'année précédente (N-1) :</p>
+                <table class="bilan">
+                    <thead>
+                        <tr>
+                        <th>Actif</th>
+                        <th>VNC</th>
+                        <th>Passif</th>
+                        <th>VNC</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Immobilisations</td>
+                            <td class="montant">83 000 €</td>
+                            <td>Capital</td>
+                            <td class="montant">100 000 €</td>
+                        </tr>
+                        <tr>
+                            <td>Clients</td>
+                            <td class="montant">22 050 €</td>
+                            <td>Report à nouveau</td>
+                            <td class="montant">21 500 €</td>
+                        </tr>
+                        <tr>
+                            <td>Banque</td>
+                            <td class="montant">58 700 €</td>
+                            <td>Emprunts</td>
+                            <td class="montant">32 000 €</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="montant"></td>
+                            <td>Fournisseurs</td>
+                            <td class="montant">10 250 €</td>
+                        </tr>
+                        <tr class="total">
+                            <td>Total Actif</td>
+                            <td class="montant">163 750 €</td>
+                            <td>Total Passif</td>
+                            <td class="montant">163 750 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Au cours du mois de janvier de l'année N, il réalise les opérations suivantes :</p>
+                <p>10/01/N : Ventes de produit finis pour 58 000 €, payé comptant</br>
+                15/01/N : Achat de fournitures stockés pour 20 000 €, payé comptant</br>
+                18/01/N : Achat d'un ordinateur portable pour 1 200 €, payé comptant</br>
+                30/01/N : Paiement des salaires à hauteur de 8 500 €, payé comptant</p>
+                <p>Sur cette base, nous allons établir les écritures dans l'ordre :</p>
+                <p><strong>Le Journal</strong></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <td><strong>Jour</strong></td>
+                            <td><strong>N° pièce</strong></td>
+                            <td><strong>Libellé</strong></td>
+                            <td><strong>Code</strong></td>
+                            <td><strong>Intitulé</strong></td>
+                            <td><strong>Justificatif</strong></td>
+                            <td><strong>Débit (€)</strong></td>
+                            <td><strong>Crédit (€)</strong></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10/01/N</td>
+                            <td>R 1001N</td>
+                            <td>Paiement vente</td>
+                            <td>512</td>
+                            <td>Banque</td>
+                            <td>Relevé 1001N</td>
+                            <td>58 000</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10/01/N</td>
+                            <td>F 0001</td>
+                            <td>Ventes</td>
+                            <td>701</td>
+                            <td>Ventes de produits finis</td>
+                            <td>Facture 0001</td>
+                            <td></td>
+                            <td>58 000</td>
+                        </tr>
+                        <tr>
+                            <td>15/01/N</td>
+                            <td>F 0002</td>
+                            <td>Achat de fournitures</td>
+                            <td>601</td>
+                            <td>Achats stockés - Matières premières et fournitures</td>
+                            <td>Facture 0002</td>
+                            <td>20 000</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>15/01/N</td>
+                            <td>R 1501N</td>
+                            <td>Paiement achat</td>
+                            <td>512</td>
+                            <td>Banque</td>
+                            <td>Relevé 1501N</td>
+                            <td></td>
+                            <td>20 000</td>
+                        </tr>
+                        <tr>
+                            <td>18/01/N</td>
+                            <td>F 0003</td>
+                            <td>Achat d'un ordinateur portable</td>
+                            <td>2183</td>
+                            <td>Matériel de bureau et matériel informatique</td>
+                            <td>Facture 0003</td>
+                            <td>1 200</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>18/01/N</td>
+                            <td>R 1801N</td>
+                            <td>Paiement achat</td>
+                            <td>512</td>
+                            <td>Banque</td>
+                            <td>Relevé 1801N</td>
+                            <td></td>
+                            <td>1 200</td>
+                        </tr>
+                        <tr>
+                            <td>30/01/N</td>
+                            <td>F 0004</td>
+                            <td>Salaires</td>
+                            <td>64</td>
+                            <td>Charges de personnel</td>
+                            <td>Facture 0004</td>
+                            <td>8 500</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>30/01/N</td>
+                            <td>R 3001N</td>
+                            <td>Paiement salaires</td>
+                            <td>512</td>
+                            <td>Banque</td>
+                            <td>Relevé 3001N</td>
+                            <td></td>
+                            <td>8 500</td>
+                        </tr>
+                        <tr>
+                            <td>31/01/N</td>
+                            <td colspan="5"><strong>TOTAL</strong></td>
+                            <td><strong>87 700</strong></td>
+                            <td><strong>87 700</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Analysons les écritures de plus prêt :</p>
+                <p><strong>Ligne 1 :</strong> On débite 58 000 € du compte financier - banque pour noté que l'élément est payer et ajouter au compte banque qui doit ajouter cette somme dans le passif du bilan</p>
+                <p><strong>Ligne 2 :</strong> On crédite 58 000 € dans le compte produits - vente pour qu'au compte de résultat, il rentre dans les produits (bénéfice)</p>
+                <p><strong>Ligne 3 :</strong> On débite 20 000 € du compte des charges - fournitures stockés pour qu'au compte de résultat, il rentre dans les charges payés</p>
+                <p><strong>Ligne 4 :</strong> On crédite 20 000 € sur le compte financier - banque pour noté que l'élément est payer et ajouter au compte banque qui doit retirer cette somme dans le passif du bilan</p>
+                <p><strong>Ligne 5 :</strong> On débite 1 200 € dans le compte d'immobilisation corporelle car le matériel de bureau est un outil qui va servir dans l'entreprise</p>
+                <p><strong>Ligne 6 :</strong> On credite 1 200 € sur le compte financier - banque pour noté que l'élément est payer et ajouter au compte banque qui doit retirer cette somme dans le passif du bilan</p>
+                <p><strong>Ligne 7 :</strong> On débite 8 500 € du compte des charges - salaires pour qu'au compte de résultat, il rentre dans les charges payés</p>
+                <p><strong>Ligne 8 :</strong> On crédite 8 500 € sur le compte financier - banque pour noté que l'élément est payer et ajouter au compte banque qui doit retirer cette somme dans le passif du bilan</p>
+                <p>Le journal est rempli avec les informations fournis sur les mouvements du mois de janvier et le total des débits est égale au total des crédits. De plus, l'écriture est organiser en inscrivant d'abord le débit, ensuite le crédit et dans l'ordre chronologique.</p>
+                <p>Maintenant que tout est correctement rentrer dans le journal, passons au <strong>grand livre</strong> :</p>
+                <table class="compta-table">
+                    <caption>101 – Capital</caption>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Pièce</th>
+                            <th>Journal</th>
+                            <th class="right">Débit (€)</th>
+                            <th class="right">Crédit (€)</th>
+                            <th class="right">Solde (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/01/N</td>
+                            <td>A nouveaux</td>
+                            <td>AN</td>
+                            <td class="right"></td>
+                            <td class="right">100 000</td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr class="solde">
+                            <td>31/01/N</td>
+                            <td colspan="4">Solde créditeur</td>
+                            <td class="right">100 000 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="compta-table">
+                    <caption>110 – Report à nouveaux / solde créditeur</caption>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Pièce</th>
+                            <th>Journal</th>
+                            <th class="right">Débit (€)</th>
+                            <th class="right">Crédit (€)</th>
+                            <th class="right">Solde (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/01/N</td>
+                            <td>A nouveaux</td>
+                            <td>AN</td>
+                            <td class="right"></td>
+                            <td class="right">21 500</td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr class="solde">
+                            <td>31/01/N</td>
+                            <td colspan="4">Solde Créditeur</td>
+                            <td class="right">21 500</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="compta-table">
+                    <caption>16 – Emprunts</caption>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Pièce</th>
+                            <th>Journal</th>
+                            <th class="right">Débit (€)</th>
+                            <th class="right">Crédit (€)</th>
+                            <th class="right">Solde (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/01/N</td>
+                            <td>A nouveaux</td>
+                            <td>AN</td>
+                            <td class="right"></td>
+                            <td class="right">32 000</td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr class="solde">
+                            <td>31/01/N</td>
+                            <td colspan="4">Solde Créditeur</td>
+                            <td class="right">32 000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="compta-table">
+                    <caption>218 – Autres immobilisations corporelles</caption>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Pièce</th>
+                            <th>Journal</th>
+                            <th class="right">Débit (€)</th>
+                            <th class="right">Crédit (€)</th>
+                            <th class="right">Solde (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/01/N</td>
+                            <td>A nouveaux</td>
+                            <td>AN</td>
+                            <td class="right">83 000</td>
+                            <td class="right"></td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr>
+                            <td>18/01/N</td>
+                            <td>F 0003</td>
+                            <td>BQ</td>
+                            <td class="right"></td>
+                            <td class="right">1 200</td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr class="solde">
+                            <td>31/01/N</td>
+                            <td colspan="4">Solde Débiteur</td>
+                            <td class="right">84 200</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="compta-table">
+                    <caption>401 – Fournisseurs</caption>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Pièce</th>
+                            <th>Journal</th>
+                            <th class="right">Débit (€)</th>
+                            <th class="right">Crédit (€)</th>
+                            <th class="right">Solde (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/01/N</td>
+                            <td>A nouveaux</td>
+                            <td>AN</td>
+                            <td class="right"></td>
+                            <td class="right">10 250</td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr class="solde">
+                            <td>31/01/N</td>
+                            <td colspan="4">Solde Créditeur</td>
+                            <td class="right">10 250</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="compta-table">
+                    <caption>411 – Clients</caption>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Pièce</th>
+                            <th>Journal</th>
+                            <th class="right">Débit (€)</th>
+                            <th class="right">Crédit (€)</th>
+                            <th class="right">Solde (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/01/N</td>
+                            <td>A nouveaux</td>
+                            <td>AN</td>
+                            <td class="right">22 050</td>
+                            <td class="right"></td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr class="solde">
+                            <td>31/01/N</td>
+                            <td colspan="4">Solde Débiteur</td>
+                            <td class="right">22 050</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="compta-table">
+                    <caption>512 – Banques</caption>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Pièce</th>
+                            <th>Journal</th>
+                            <th class="right">Débit (€)</th>
+                            <th class="right">Crédit (€)</th>
+                            <th class="right">Solde (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/01/N</td>
+                            <td>A nouveaux</td>
+                            <td>AN</td>
+                            <td class="right">58 700</td>
+                            <td class="right"></td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr>
+                            <td>10/01/N</td>
+                            <td>R 1001N</td>
+                            <td>BQ</td>
+                            <td class="right">58 000</td>
+                            <td class="right"></td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr>
+                            <td>15/01/N</td>
+                            <td>R 1501N</td>
+                            <td>BQ</td>
+                            <td class="right"></td>
+                            <td class="right">20 000</td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr>
+                            <td>18/01/N</td>
+                            <td>R 1801N</td>
+                            <td>BQ</td>
+                            <td class="right"></td>
+                            <td class="right">1 200</td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr>
+                            <td>30/01/N</td>
+                            <td>R 3001N</td>
+                            <td>BQ</td>
+                            <td class="right"></td>
+                            <td class="right">8 500</td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr class="solde">
+                            <td>31/01/N</td>
+                            <td colspan="4">Solde Débiteur</td>
+                            <td class="right">87 000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="compta-table">
+                    <caption>601 – Achat stockés / Matières premières et fournitures</caption>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Pièce</th>
+                            <th>Journal</th>
+                            <th class="right">Débit (€)</th>
+                            <th class="right">Crédit (€)</th>
+                            <th class="right">Solde (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>15/01/N</td>
+                            <td>F 0002</td>
+                            <td>HA</td>
+                            <td class="right">20 000</td>
+                            <td class="right"></td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr class="solde">
+                            <td>31/01/N</td>
+                            <td colspan="4">Solde Débiteur</td>
+                            <td class="right">20 000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="compta-table">
+                    <caption>64 – Charges de personnel</caption>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Pièce</th>
+                            <th>Journal</th>
+                            <th class="right">Débit (€)</th>
+                            <th class="right">Crédit (€)</th>
+                            <th class="right">Solde (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>30/01/N</td>
+                            <td>F 0004</td>
+                            <td>BQ</td>
+                            <td class="right">8 500</td>
+                            <td class="right"></td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr class="solde">
+                            <td>31/01/N</td>
+                            <td colspan="4">Solde Débiteur</td>
+                            <td class="right">8 500</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="compta-table">
+                    <caption>701 – Ventes de produits finis</caption>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Pièce</th>
+                            <th>Journal</th>
+                            <th class="right">Débit (€)</th>
+                            <th class="right">Crédit (€)</th>
+                            <th class="right">Solde (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10/01/N</td>
+                            <td>F 0001</td>
+                            <td>VE</td>
+                            <td class="right"></td>
+                            <td class="right">58 000</td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr class="solde">
+                            <td>31/01/N</td>
+                            <td colspan="4">Solde Créditeur</td>
+                            <td class="right">58 000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Toutes les comptes sont maintenant trier par classe, ont 1 solde commun par classe avec le report à nouveau affectué depuis le bilan N-1.</p>
+                <p>Maintenant, passons à l'étape de vérification en reprennant les soldes du grand livre et en les rajoutants dans <strong>la balance</strong> :</p>
+                <table class="compta-table">
+                    <thead>
+                        <tr>
+                            <th>N° de compte</th>
+                            <th>Intitulé</th>
+                            <th class="right">Solde débiteur (€)</th>
+                            <th class="right">Solde créditeur (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>101</td>
+                            <td>Capital</td>
+                            <td class="right"></td>
+                            <td class="right">100 000</td>
+                        </tr>
+                        <tr>
+                            <td>110</td>
+                            <td>Report à nouveau</td>
+                            <td class="right"></td>
+                            <td class="right">21 500</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>Emprunts</td>
+                            <td class="right"></td>
+                            <td class="right">32 000</td>
+                        </tr>
+                        <tr>
+                            <td>218</td>
+                            <td>Autres immobilisations corporelles</td>
+                            <td class="right">84 200</td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr>
+                            <td>401</td>
+                            <td>Fournisseurs</td>
+                            <td class="right"></td>
+                            <td class="right">10 250</td>
+                        </tr>
+                        <tr>
+                            <td>411</td>
+                            <td>Clients</td>
+                            <td class="right">22 050</td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr>
+                            <td>512</td>
+                            <td>Banque</td>
+                            <td class="right">87 000</td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr>
+                            <td>601</td>
+                            <td>Achats stockés - Matières premières et fournitures</td>
+                            <td class="right"></td>
+                            <td class="right">20 000</td>
+                        </tr>
+                        <tr>
+                            <td>64</td>
+                            <td>Charges de personnel</td>
+                            <td class="right">8 500</td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr>
+                            <td>701</td>
+                            <td>Ventes de produits finis</td>
+                            <td class="right">58 000</td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr class="solde">
+                            <td colspan="2">Total balance</td>
+                            <td class="right">221 750 €</td>
+                            <td class="right">221 750 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>On constate que lorsqu'on établi la balance avec la récupération des soldes du grand livre, la balance reste parfaitement équillibré.</p>
+                <p>On peut enfin établir <strong>le compte de résultat</strong> en récupérant les comptes 6 (charges) et 7 (produits) :</p>
+                <table class="bilan">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Charges (€)</th>
+                            <th colspan="2">Produits (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Achats stockés - Matières premières et fournitures</td>
+                            <td class="montant">20 000</td>
+                            <td>Ventes de marchandises</td>
+                            <td class="montant">58 000</td>
+                        </tr>
+                        <tr>
+                            <td>Charges de personnel</td>
+                            <td class="montant">8 500</td>
+                            <td></td>
+                            <td class="montant"></td>
+                        </tr>
+                        <tr class="total">
+                            <td>Total Charge (€)</td>
+                            <td class="montant">28 500</td>
+                            <td>Total Produit (€)</td>
+                            <td class="montant">58 000</td>
+                        </tr>
+                        <tr class="total">
+                            <td style="color: green;">Résultat bénéficiaire (€)</td>
+                            <td class="montant">29 500</td>
+                            <td>Résultat à perte (€)</td>
+                            <td class="montant"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Une fois le compte de résultat établi, nous pouvons récupérer le résultat calculer pour pouvoir l'ajouter au passif du bilan, en positif étant donner que le résultat est bénéficiaire.</p>
+                <p>Tous les éléments sont enfin réunis pour pouvoir établir <strong>Le bilan</strong> de l'entreprise :</p>
+                <table class="bilan">
+                    <thead>
+                        <tr>
+                            <th colspan="4">Actifs (€)</th>
+                            <th colspan="2">Passifs (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>VBC</td>
+                            <td>DEP</td>
+                            <td>VNC</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Immobilisations</td>
+                            <td class="montant">84 200</td>
+                            <td class="montant">-</td>
+                            <td class="montant">84 200</td>
+                            <td>Capitaux propres</td>
+                            <td class="montant">100 000</td>
+                        </tr>
+                        <tr>
+                            <td>Clients</td>
+                            <td class="montant">22 050</td>
+                            <td class="montant">-</td>
+                            <td class="montant">22 050</td>
+                            <td>Report à nouveau</td>
+                            <td class="montant">21 500</td>
+                        </tr>
+                        <tr>
+                            <td>Banque</td>
+                            <td class="montant">87 000</td>
+                            <td class="montant">-</td>
+                            <td class="montant">87 000</td>
+                            <td>Résultat</td>
+                            <td class="montant">29 500</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="montant"></td>
+                            <td class="montant"></td>
+                            <td class="montant"></td>
+                            <td>Emprunts</td>
+                            <td class="montant">32 000</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="montant"></td>
+                            <td class="montant"></td>
+                            <td class="montant"></td>
+                            <td>Fournisseurs</td>
+                            <td class="montant">10 250</td>
+                        </tr>
+                        <tr class="total">
+                            <td>Total Actifs (€)</td>
+                            <td class="montant">193 250</td>
+                            <td class="montant">-</td>
+                            <td class="montant">193 250</td>
+                            <td>Total Passifs (€)</td>
+                            <td class="montant">193 250</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>(VBC = Valeur Brut Comptable / DEP = Dépenses / VNC = Valeur Net Comptable)</p>
+                <p>Et voilà le résultat final d'une écriture comptable simplifié et classique. On y retrouve :</p>
+                <p><strong style="color: blue;">Le Journal</strong> parfaitement équillibré et trier par date suivant les indications fournis précedemment</p>
+                <p><strong style="color: blue;">Le Grand Livre</strong> qui réunis tous les comptes passés et enregistrés dans le journal par ordre de compte celon leur numérotation</p>
+                <p><strong style="color: blue;">La Balance Comptable Générale</strong> qui reprend les soldes inscrits dans le grand livre pour vérifier s'ils sont juste et équillibré</p>
+                <p><strong style="color: blue;">Le Compte De Résultat</strong> qui récupère les comptes charges (6) et les comptes produits (7) et qui calcul le résultat de la différence entre les deux, puis détermine si le résultat est positif (bénéficiaire) ou négatif (à perte)</p>
+                <p><strong style="color: blue;">Le Bilan Comptable</strong> qui récupère tous les comptes inscrits (des classes 1 à 5), ajoute le résultat du compte de résultat et verifie si les comptes sont bien équillibrés</p>
+            </section>
+        </main>
+        <nav class="chapter-nav">
+            <a href="index04.html" class="chapter-nav__item prev">
+                <span class="chapter-nav__arrow">&#10094;</span>
+                <span class="chapter-nav__label">Chapitre précédent</span>
+                <span class="chapter-nav__title">L’impact des opérations sur les documents de synthèse</span>
             </a>
-        </div>
-        <div class="head__burger">
-            <nav class="head__nav">
-                <a href="#" id="btn-cours">Cours <span class="arrow">▼</span></a>
-                <a href="#" id="btn-calculs">Calculs <span class="arrow">▼</span></a>
-                <a href="../PCG/indexpcg.html" id="btn-pcg">PCG</a>
-            </nav>
-            <ul id="cours-list" class="cours">
-                <li><a href="../cours/index01.html">01 - La comptabilité</a></li>
-                <li><a href="../cours/index02.html">02 - Le Bilan</a></li>
-                <li><a href="../cours/index03.html">03 - Le compte de résultat</a></li>
-                <li><a href="../cours/index04.html">04 - L’impact des opérations sur les documents de synthèse</a></li>
-                <li><a href="../cours/index05.html">05 - La partie double et le fonctionnement des comptes</a></li>
-                <li><a href="../cours/index06.html">06 - La comptabilisation des factures d’achats et de ventes</a></li>
-                <li><a href="../cours/index07.html">07 - La comptabilisation des encaissements et des décaissements</a></li>
-                <li><a href="../cours/index08.html">08 - La TVA</a></li>
-                <li><a href="../cours/index09.html">09 - La prise en compte de la TVA dans les écritures</a></li>
-                <li><a href="../cours/index10.html">10 - Les immobilisations</a></li>
-                <li><a href="../cours/index11.html">11 - Le financement par emprunts</a></li>
-                <li><a href="../cours/index12.html">12 - La comptabilisation des salaires et des charges sociales</a></li>
-                <li><a href="../cours/index13.html">13 - Les amortissements</a></li>
-                <li><a href="../cours/index14.html">14 - Les charges à payer et les produits à recevoir</a></li>
-                <li><a href="../cours/index15.html">15 - Les charges et les produits constatées d’avances</a></li>
-                <li><a href="../cours/index16.html">16 - Les dépréciations</a></li>
-                <li><a href="../cours/index17.html">17 - Les provisions</a></li>
-                <li><a href="../cours/index18.html">18 - Les stocks : Valorisation et comptabilisation</a></li>
-                <li><a href="../cours/index19.html">Chapitre 19 :</a></li>
-                <li><a href="../cours/index20.html">Chapitre 20 :</a></li>
-                <li><a href="../cours/index21.html">Chapitre 21 :</a></li>
-            </ul>
-            <ul id="calculs-list" class="calculs">
-                <li><a href="../calculs/indexvds.html">Valorisation des stocks</a></li>
-                <li><a href="../calculs/indexamt.html">Amortissements</a></li>
-                <li><a href="../calculs/indexemp.html">Emprunts</a></li>
-                <li><a href="../calculs/indextva.html">TVA</a></li>
-                <li><a href="../calculs/indexpct.html">Pourcentages</a></li>
-            </ul>
-        </div>
-    </header>
-<script src="script05.js"></script>
-</body>
+            <a href="index06.html" class="chapter-nav__item next">
+                <span class="chapter-nav__arrow">&#10095;</span>
+                <span class="chapter-nav__label">Chapitre suivant</span>
+                <span class="chapter-nav__title">La comptabilisation des factures d’achats et de ventes</span>
+            </a>
+        </nav>
+    <script src="script05.js"></script>
+    </body>
+</html>

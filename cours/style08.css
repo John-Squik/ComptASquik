@@ -103,4 +103,177 @@ body {
 
 .arrow.open {
   transform: rotate(180deg);
+}
+
+.content {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+.content .section {
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.content .section table {
+  border-collapse: collapse;
+}
+.content .section table th, .content .section table td {
+  border: 1px solid black;
+  padding: 8px;
+}
+.content .section h2 {
+  color: #2196f3;
+  margin-bottom: 1rem;
+}
+.content .section ul {
+  padding-left: 1.2rem;
+}
+.content .section ul li {
+  margin-bottom: 0.5rem;
+  list-style: none;
+}
+.content .section .cards {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.content .section .cards .card {
+  flex: 1;
+  min-width: 200px;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.content .section .cards .card h3 {
+  margin-bottom: 0.5rem;
+  color: #2196f3;
+}
+.content .section .cards .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bilan {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+.bilan th, .bilan td {
+  border: 1px solid #333;
+  padding: 8px 10px;
+}
+.bilan thead th {
+  background-color: #eaeaea;
+  text-align: center;
+  font-weight: bold;
+}
+.bilan .section td {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  text-align: center;
+}
+.bilan .montant {
+  text-align: right;
+  white-space: nowrap;
+}
+.bilan .total td {
+  font-weight: bold;
+  background-color: #ddd;
+}
+
+.page-content {
+  flex: 1;
+}
+
+.chapter-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #111;
+  box-sizing: border-box;
+}
+.chapter-nav__arrow {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.chapter-nav__item:hover .chapter-nav__arrow {
+  transform: scale(1.15);
+  color: #3b82f6;
+}
+.chapter-nav__item {
+  display: flex;
+  flex-direction: column;
+  max-width: 45%;
+  text-decoration: none;
+  color: #fff;
+}
+.chapter-nav__item.prev {
+  align-items: flex-start;
+}
+.chapter-nav__item.next {
+  align-items: flex-end;
+}
+.chapter-nav__arrow {
+  font-size: 2rem;
+  line-height: 1;
+}
+.chapter-nav__label {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-top: 4px;
+}
+.chapter-nav__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.compta-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+.compta-table caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+.compta-table th,
+.compta-table td {
+  border: 1px solid #333;
+  padding: 8px;
+}
+.compta-table thead {
+  background-color: #f2f2f2;
+}
+.compta-table th {
+  font-weight: bold;
+  text-align: center;
+}
+.compta-table td {
+  vertical-align: middle;
+}
+.compta-table .right {
+  text-align: right;
+}
+.compta-table .solde {
+  font-weight: bold;
+  background-color: #fafafa;
+}
+.compta-table .solde td {
+  border-top: 2px solid #000;
 }/*# sourceMappingURL=style08.css.map */

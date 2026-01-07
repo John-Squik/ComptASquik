@@ -1,0 +1,505 @@
+--Header type--
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <Title>CompASquik - Accueil</Title>
+        <Link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header class="head">
+            <div class="head__logo">
+                <a href="index.html">
+                    <img src="assets/logo.png" alt="logo"/>
+                </a>
+            </div>
+            <div class="head__burger">
+                <nav class="head__nav">
+                    <a href="#" id="btn-cours">Cours <span class="arrow">▼</span></a>
+                    <a href="#" id="btn-calculs">Calculs <span class="arrow">▼</span></a>
+                    <a href="PCG/indexpcg.html" id="btn-pcg">PCG</a>
+                </nav>
+                <ul id="cours-list" class="cours">
+                    <li><a href="cours/index01.html">01 - La comptabilité</a></li>
+                    <li><a href="cours/index02.html">02 - Le Bilan</a></li>
+                    <li><a href="cours/index03.html">03 - Le compte de résultat</a></li>
+                    <li><a href="cours/index04.html">04 - L’impact des opérations sur les documents de synthèse</a></li>
+                    <li><a href="cours/index05.html">05 - La partie double et le fonctionnement des comptes</a></li>
+                    <li><a href="cours/index06.html">06 - La comptabilisation des factures d’achats et de ventes</a></li>
+                    <li><a href="cours/index07.html">07 - La comptabilisation des encaissements et des décaissements</a></li>
+                    <li><a href="cours/index08.html">08 - La TVA</a></li>
+                    <li><a href="cours/index09.html">09 - La prise en compte de la TVA dans les écritures</a></li>
+                    <li><a href="cours/index10.html">10 - Les immobilisations</a></li>
+                    <li><a href="cours/index11.html">11 - Le financement par emprunts</a></li>
+                    <li><a href="cours/index12.html">12 - La comptabilisation des salaires et des charges sociales</a></li>
+                    <li><a href="cours/index13.html">13 - Les amortissements</a></li>
+                    <li><a href="cours/index14.html">14 - Les charges à payer et les produits à recevoir</a></li>
+                    <li><a href="cours/index15.html">15 - Les charges et les produits constatées d’avances</a></li>
+                    <li><a href="cours/index16.html">16 - Les dépréciations</a></li>
+                    <li><a href="cours/index17.html">17 - Les provisions</a></li>
+                    <li><a href="cours/index18.html">18 - Les stocks : Valorisation et comptabilisation</a></li>
+                    <li><a href="cours/index19.html">Chapitre 19 :</a></li>
+                    <li><a href="cours/index20.html">Chapitre 20 :</a></li>
+                    <li><a href="cours/index21.html">Chapitre 21 :</a></li>
+                </ul>
+                <ul id="calculs-list" class="calculs">
+                    <li><a href="calculs/indexvds.html">Valorisation des stocks</a></li>
+                    <li><a href="calculs/indexamt.html">Amortissements</a></li>
+                    <li><a href="calculs/indexemp.html">Emprunts</a></li>
+                    <li><a href="calculs/indextva.html">TVA</a></li>
+                    <li><a href="calculs/indexpct.html">Pourcentages</a></li>
+                </ul>
+            </div>
+        </header>
+    <script src="script.js"></script>
+    </body>
+</html>
+--Header type SCSS--
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+.head__nav{
+    display: flex;
+    color: black;
+    text-decoration: none;
+}
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;          
+    padding: 0 20px;
+    height: 60px;            
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    overflow: visible;
+}
+.head__logo{
+    display: flex;
+}
+.head__logo img {
+    height: 50px;
+}
+.head__burger {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;  
+    position: relative;   
+    gap: 5px;
+    overflow: visible;
+}
+.head__nav {
+    display: flex;
+    gap: 15px;
+}
+.head__nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+#btn-cours:hover, #btn-calculs:hover, #btn-pcg:hover {
+    color: blue;
+}
+.cours a, .calculs a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.cours, .calculs {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 200px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease, padding 0.3s ease;
+    background-color: #f2f2f2;
+    border-radius: 12px;
+    padding: 0 20px;  
+    list-style: none;
+    z-index: 999;
+}
+.cours.open, .calculs.open {
+    max-height: 80vh;
+    overflow-y: auto;
+    opacity: 1;
+    transform: translateY(0);
+    padding: 20px; 
+}
+.cours li, .calculs li {
+    padding: 8px 0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+.cours li:hover, .calculs li:hover {
+    transform: scale(1.03);
+}
+.arrow {
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+.arrow.open {
+    transform: rotate(180deg);
+}
+--Header type JS--
+const btnCours = document.getElementById("btn-cours");
+const coursList = document.getElementById("cours-list");
+const btnCalculs = document.getElementById("btn-calculs");
+const calculsList = document.getElementById("calculs-list");
+const arrowCours = btnCours.querySelector(".arrow");
+const arrowCalculs = btnCalculs.querySelector(".arrow");
+btnCours.addEventListener("click", (e) => {
+    e.preventDefault();
+    calculsList.classList.remove("open");
+    arrowCalculs.classList.remove("open");
+    coursList.classList.toggle("open");
+    arrowCours.classList.toggle("open");
+});
+btnCalculs.addEventListener("click", (e) => {
+    e.preventDefault();
+    coursList.classList.remove("open");
+    arrowCours.classList.remove("open");
+    calculsList.classList.toggle("open");
+    arrowCalculs.classList.toggle("open");
+});
+document.addEventListener("click", (e) => {
+    const clickCours =
+        coursList.contains(e.target) || btnCours.contains(e.target);
+    const clickCalculs =
+        calculsList.contains(e.target) || btnCalculs.contains(e.target);
+    if (!clickCours && !clickCalculs) {
+        coursList.classList.remove("open");
+        calculsList.classList.remove("open");
+        arrowCours.classList.remove("open");
+        arrowCalculs.classList.remove("open");
+    }
+});
+--Journal--
+<table>
+    <thead>
+        <tr>
+            <td><strong>Jour</strong></td>
+            <td><strong>N° pièce</strong></td>
+            <td><strong>Libellé</strong></td>
+            <td><strong>Code</strong></td>
+            <td><strong>Intitulé</strong></td>
+            <td><strong>Justificatif</strong></td>
+            <td><strong>Débit (€)</strong></td>
+            <td><strong>Crédit (€)</strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>10/01/N</td>
+            <td>R 1001N</td>
+            <td>Paiement vente</td>
+            <td>512</td>
+            <td>Banque</td>
+            <td>Relevé 1001N</td>
+            <td>58 000</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>31/01/N</td>
+            <td colspan="5"><strong>TOTAL</strong></td>
+            <td><strong>87 700</strong></td>
+            <td><strong>87 700</strong></td>
+        </tr>
+    </tbody>
+</table>
+--Grand livre--
+<table class="compta-table">
+    <caption>101 – Capital</caption>
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Pièce</th>
+            <th>Journal</th>
+            <th class="right">Débit (€)</th>
+            <th class="right">Crédit (€)</th>
+            <th class="right">Solde (€)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>01/01/N</td>
+            <td>A nouveaux</td>
+            <td>AN</td>
+            <td class="right"></td>
+            <td class="right">100 000</td>
+            <td class="right"></td>
+        </tr>
+        <tr class="solde">
+            <td>31/01/N</td>
+            <td colspan="4">Solde créditeur</td>
+            <td class="right">100 000 €</td>
+        </tr>
+    </tbody>
+</table>
+--Balance--
+<table class="compta-table">
+    <thead>
+        <tr>
+            <th>N° de compte</th>
+            <th>Intitulé</th>
+            <th class="right">Solde débiteur (€)</th>
+            <th class="right">Solde créditeur (€)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>101</td>
+            <td>Capital</td>
+            <td class="right"></td>
+            <td class="right">100 000</td>
+        </tr>
+        <tr class="solde">
+            <td colspan="2">Total balance</td>
+            <td class="right">221 750 €</td>
+            <td class="right">221 750 €</td>
+        </tr>
+    </tbody>
+</table>
+--Compte de résultat--
+<table class="bilan">
+    <thead>
+        <tr>
+            <th colspan="2">Charges (€)</th>
+            <th colspan="2">Produits (€)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Achats stockés - Matières premières et fournitures</td>
+            <td class="montant">20 000</td>
+            <td>Ventes de marchandises</td>
+            <td class="montant">58 000</td>
+        </tr>
+        <tr class="total">
+            <td style="color: green;">Résultat bénéficiaire (€)</td>
+            <td class="montant" style="color: green;">29 500</td>
+            <td style="color: red;">Résultat à perte (€)</td>
+            <td class="montant" style="color: red;"></td>
+        </tr>
+    </tbody>
+</table>
+--Bilan--
+<table class="bilan">
+    <thead>
+        <tr>
+            <th colspan="4">Actifs (€)</th>
+            <th colspan="2">Passifs (€)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td>VBC</td>
+            <td>DEP</td>
+            <td>VNC</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Immobilisations</td>
+            <td class="montant">84 200</td>
+            <td class="montant">-</td>
+            <td class="montant">84 200</td>
+            <td>Capitaux propres</td>
+            <td class="montant">100 000</td>
+        </tr>
+        <tr class="total">
+            <td>Total Actifs (€)</td>
+            <td class="montant">193 250</td>
+            <td class="montant">-</td>
+            <td class="montant">193 250</td>
+            <td>Total Passifs (€)</td>
+            <td class="montant">193 250</td>
+        </tr>
+    </tbody>
+</table>
+--Table type SCSS--
+$primary-color: #2196f3;
+$secondary-color: #f5f5f5;
+$card-bg: #ffffff;
+$card-shadow: rgba(0, 0, 0, 0.1);
+$text-color: #333;
+.content {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+  .section {
+    background-color: $card-bg;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px $card-shadow;
+    table {
+        border-collapse: collapse;
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    }
+    h2 {
+      color: $primary-color;
+      margin-bottom: 1rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+      li {
+        margin-bottom: 0.5rem;
+        list-style: none;
+      }
+    }
+    .cards {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+      .card {
+        flex: 1;
+        min-width: 200px;
+        background-color: $secondary-color;
+        border-radius: 12px;
+        padding: 1rem;
+        text-align: center;
+        box-shadow: 0 3px 6px $card-shadow;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        h3 {
+          margin-bottom: 0.5rem;
+          color: $primary-color;
+        }
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 6px 12px $card-shadow;
+        }
+      }
+    }
+  }
+}
+.bilan {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+
+  th, td {
+    border: 1px solid #333;
+    padding: 8px 10px;
+  }
+
+  thead th {
+    background-color: #eaeaea;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .section td {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .montant {
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .total td {
+    font-weight: bold;
+    background-color: #ddd;
+  }
+}
+.page-content {
+    flex: 1;
+}
+.chapter-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: #111;
+    box-sizing: border-box;
+    &__arrow {
+        transition: transform 0.2s ease, color 0.2s ease;
+    }
+    &__item:hover &__arrow {
+        transform: scale(1.15);
+        color: #3b82f6;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        max-width: 45%;
+        text-decoration: none;
+        color: #fff;
+        &.prev {
+            align-items: flex-start;
+        }
+        &.next {
+            align-items: flex-end;
+        }
+    }
+    &__arrow {
+        font-size: 2rem;
+        line-height: 1;
+    }
+    &__label {
+        font-size: 0.75rem;
+        opacity: 0.7;
+        margin-top: 4px;
+    }
+    &__title {
+        font-size: 0.9rem;
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+.compta-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    caption {
+        caption-side: top;
+        text-align: left;
+        font-weight: bold;
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+    th,
+    td {
+        border: 1px solid #333;
+        padding: 8px;
+    }
+    thead {
+        background-color: #f2f2f2;
+    }
+    th {
+        font-weight: bold;
+        text-align: center;
+    }
+    td {
+        vertical-align: middle;
+    }
+    .right {
+        text-align: right;
+    }
+    .solde {
+        font-weight: bold;
+        background-color: #fafafa;
+        td {
+            border-top: 2px solid #000;
+        }
+    }
+}
